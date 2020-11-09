@@ -1,0 +1,20 @@
+/*/---- Header begins ----/*/
+.header {
+    nav {
+        .nav-list {
+            li {
+                &.active a {
+                    color: $dark-color1;
+                }
+                a {
+                    color: $white-color;
+                    &::after {
+                        background: $dark-color1;;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+/*/---- Header ends ----/*/
