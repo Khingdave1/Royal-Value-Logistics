@@ -189,7 +189,8 @@ h5 {
             // Mobile Nav view start //
             @media only screen and (max-width: 745px) {
                 position: fixed;
-                top: -100%;
+                overflow: scroll;
+                top: -1000%;
                 right: 0;
                 width: 100%;
                 height: 100%;
