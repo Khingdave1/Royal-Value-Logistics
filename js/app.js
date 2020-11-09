@@ -14,6 +14,11 @@ openMenu.addEventListener('click', () => {
 closeMenu.addEventListener('click', () => {
     // navList.classList.toggle('open-menu');
     // toggleMenu.classList.toggle('open-menu');
-    navList.style.top = "-100%";
+    navList.style.top = "-1000%";
 });
+
+
+/*===== UPDATE THE ELEMENT TO CURRENT YEAR =====*/
+// Update the element to the current year //
+document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()));
 
