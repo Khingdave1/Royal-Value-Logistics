@@ -18,11 +18,11 @@
 <body>
     <div class="container">
         <!-- Header -->
-        <header class="header">
+        <header class="header" id="header">
             <nav>
                 <!-- Logo -->
                 <a href="index.html" class="logo">
-                    <img src="img/header-logo.png" alt="logo" class="logo-large">
+                    <img src="img/logo-large.png" alt="logo" class="logo-large">
                     <img src="img/logo.png" alt="logo" class="logo-small">
                 </a>
                 <!-- Hamburger menu -->
@@ -33,7 +33,35 @@
                 <div class="nav-list">
                     <ul class="uppercase">
                         <li class="nav-link active"><a href="index.html">Home</a></li>
-                        <li class="nav-link"><a href="services/errand-service/errand.html">Services</a></li>
+                        <li class="nav-link service">
+                            <a href="services/errand-service/errand.html">Services</a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <h6>Errand service</h6>
+                                        <p>Id amet, aliquet sit elit vestibulum lorem placerat duis semper. Condimentum ut pretium egestas nec eu ac lacus. Aliquam</p>
+                                        <a href="#" class="btn light-btn">Use this service</a>
+                                    </li>
+                                    <li>
+                                        <h6>Lifting service</h6>
+                                        <p>Id amet, aliquet sit elit vestibulum lorem placerat duis semper. Condimentum ut pretium egestas nec eu ac lacus. Aliquam</p>
+                                        <a href="#" class="btn light-btn">Use this service</a>
+                                    </li>
+                                    <li>
+                                        <h6>Car hire</h6>
+                                        <p>Id amet, aliquet sit elit vestibulum lorem placerat duis semper. Condimentum ut pretium egestas nec eu ac lacus. Aliquam</p>
+                                        <a href="#" class="btn light-btn">Use this service</a>
+                                    </li>
+                                    <li>
+                                        <h6>Shipping</h6>
+                                        <p>Id amet, aliquet sit elit vestibulum lorem placerat duis semper. Condimentum ut pretium egestas nec eu ac lacus. Aliquam</p>
+                                        <a href="#" class="btn light-btn">Use this service</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            
+                        </li>
                         <li class="nav-link"><a href="contact-us/contact-us.html">Contact us</a></li>
 
                         <!-- Login and signup links for phone view -->
@@ -43,7 +71,7 @@
                         </li>
                     </ul>
                     <!-- Close menu icon -->
-                    <a href="#"><img src="img/close.svg" alt="icon" class="close-menu"></a>
+                    <a href="#"><img src="img/svg/close.svg" alt="icon" class="close-menu"></a>
                 </div>
                 <!-- Login and signup buttons -->
                 <div class="nav-btn uppercase">
@@ -69,17 +97,17 @@
             </div>
             <div class="why-us-content">
                 <div class="grid-item">
-                    <img src="img/speedometer.svg" alt="image">
+                    <img src="img/svg/speedometer.svg" alt="image">
                     <h5>Quality Service</h5>
                     <p>Risus lorem aenean aliquet fermentum consequat, dolor. Duis et, turpis viverra sodales lobortis adipiscing.</p>
                 </div>
                 <div class="grid-item">
-                    <img src="img/speedometer.svg" alt="image">
+                    <img src="img/svg/speedometer.svg" alt="image">
                     <h5>Fast Delivery</h5>
                     <p>Risus lorem aenean aliquet fermentum consequat, dolor. Duis et, turpis viverra sodales lobortis adipiscing.</p>
                 </div>
                 <div class="grid-item">
-                    <img src="img/speedometer.svg" alt="image">
+                    <img src="img/svg/speedometer.svg" alt="image">
                     <h5>High Standards</h5>
                     <p>Risus lorem aenean aliquet fermentum consequat, dolor. Duis et, turpis viverra sodales lobortis adipiscing.</p>
                 </div>
@@ -108,8 +136,12 @@
                 <p>Laoreet leo nunc nulla sagittis sed cursus lorem rhoncus odio. Accumsan ut donec est amet, neque, sed. In proin <br> praesent quam pellentesque. Quam tincidunt donec enim quis tellus risus.</p>
             </div>
             <div class="testi-content">
+                <!-- Arrow Icons -->
                 <div class="arrow-left">
-                    <img src="img/arrow-left.svg" alt="arrow-left">
+                    <img src="img/svg/arrow-left.svg" alt="arrow-left">
+                </div>
+                <div class="arrow-right">
+                    <img src="img/svg/arrow-right.svg" alt="arrow-right">
                 </div>
                 <div class="testi-list">
                     <!-- <div class="slider"></div> -->
@@ -119,11 +151,11 @@
                         <p>Risus lorem aenean aliquet fermentum consequat, dolor. Duis et, turpis viverra sodales lobortis adipiscing.</p>    
                         <!-- Ratings -->
                         <div class="rating">
-                            <img src="img/star.svg" alt="star">
-                            <img src="img/star.svg" alt="star">
-                            <img src="img/star.svg" alt="star">
-                            <img src="img/star.svg" alt="star">
-                            <img src="img/star.svg" alt="star">
+                            <img src="img/svg/star.svg" alt="star">
+                            <img src="img/svg/star.svg" alt="star">
+                            <img src="img/svg/star.svg" alt="star">
+                            <img src="img/svg/star.svg" alt="star">
+                            <img src="img/svg/star.svg" alt="star">
                         </div>
                     </div>
                     <!-- Controller -->
@@ -133,9 +165,6 @@
                         <div id="line3" class="dot"></div>
                         <div id="line4" class="dot"></div>
                     </div>
-                </div>
-                <div class="arrow-right">
-                    <img src="img/arrow-right.svg" alt="arrow-right">
                 </div>
             </div>
         </section>
@@ -163,12 +192,37 @@
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-content">
-                <a href="index.html"><img src="img/logo-white.png" alt="logo"></a>
-                <ul class="footer-links uppercase">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services/lifting-service/lifting-service.html">Services</a></li>
-                    <li><a href="contact-us/contact-us.html">Contact us</a></li>
-                </ul>
+                <div class="footer-top">
+                    <a href="index.html"><img src="img/logo-large-white.png" alt="logo"></a>
+                    <a href="#header" class="back-to-top uppercase">
+                        <img src="img/svg/arrow-up.svg" alt="">
+                        <p>Back to top</p>
+                        <span class="circle"></span> 
+                    </a>
+                </div>
+                <hr>
+                <div class="footer-bottom">
+                    <!-- Page links -->
+                    <ul class="footer-links uppercase">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services/lifting-service/lifting-service.html">Services</a></li>
+                        <li><a href="contact-us/contact-us.html">Contact us</a></li>
+                    </ul>
+
+                    <!-- Social links -->
+                    <ul class="footer-social">
+                        <li>
+                            <a href="#"><img src="img/svg/fb.svg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/svg/tw.svg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/svg/ig.svg" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+                
                 <p>Copyright(c) <span id="copyright"></span></p> 
             </div>
         </footer>

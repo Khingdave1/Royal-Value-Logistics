@@ -9,6 +9,110 @@
 }
 /*/---- Header ends ----/*/
 
+/*/---- Shippings begins ----/*/
+.shipping {
+    position: relative;
+    &-content {
+        // height: 542px;
+        padding: 5rem 7.5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media only screen and (max-width: 745px) {
+            display: grid;
+            grid-gap: 60px;
+        }
+        .shipping-text {
+            // flex-basis: 70%;
+            h3  {
+                margin-bottom: 20px;
+            }
+            .shipping-sample {
+                li {
+                    display: inline-block;
+                    background-color: $accent-color2;
+                    padding: 10px;
+                    margin: 0 10px 20px 0;
+                    font-size: $button-md-font - 2;
+                }
+            }
+            .btn {
+                margin-top: 30px;
+            }
+        }
+        .shipping-img {
+            // flex-basis: 40%;
+            width: 100%;
+            height: 100%;
+            img {
+                float: right;
+                width: auto;
+                height: 100%;
+                @media only screen and (max-width: 745px) {
+                    width: 100%;
+                }
+            }
+        }
+        .shipping-bg {
+            img {
+                position: absolute;
+                mix-blend-mode: multiply;
+                transform: translateX(-50%);
+            }
+            img:first-child { 
+                bottom: 0;
+                right: 30%;
+                width: 60px;
+                height: 60%;
+            }
+            img:last-child {
+                bottom: 30%; // first-child height - last-child height
+                right: 29%;
+                width: 20px;
+                height: 30%;
+            }
+        }
+    }
+}
+/*/---- shippings ends ----/*/
+
+/*/---- Download app begins ----/*/
+.download {
+    // width: 100%;
+    // height: 542px;
+    padding: 5rem 7.5%;
+    background-color: $light-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-content {
+        h2 {
+            margin-bottom: 30px;
+        }
+        .download-buttons a {
+            display: inline-block;
+            &:first-child {
+                margin-right: 10px;
+            }
+            img {
+                width: 120px;
+                height: 40px;
+            }
+        }
+    }
+    &-phone {
+        height: 100%;
+        @media only screen and (max-width: 1015px) {
+            display: none;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+/*/---- Download ends ----/*/
+
 
 /*/---- Footer begins ----/*/
 // Style is in _general.scss

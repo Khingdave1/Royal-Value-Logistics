@@ -8,6 +8,9 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -72,13 +75,17 @@ h5 {
     font-size: $h5-font;
     font-weight: 400;
 }
+h6 {
+    font-size: $h6-font;
+    font-weight: 500;
+}
 /*/---- Heading ends ----/*/
 
 /*/---- Buttons begins ----/*/
 .btn {
     display: inline-block;
     border-radius: 4px;
-    padding: 10px 20px;
+    padding: 10px 20px !important;
     // btn with the primary-color
     &.prim-btn {
         background-color: $primary-color;
@@ -111,8 +118,6 @@ h5 {
     }
 }
 /*/---- Buttons ends ----/*/
-
-/*/---- Inputs ----/*/
 
 /*/---- Header Nav begins ----/*/
 .header {
@@ -176,77 +181,27 @@ h5 {
             }
         }
         .nav-list {
-            // Close menu icon
-            .close-menu {
-                display: none;
-                width: 40px;
-                height: 40px;
-            }
-            // Login and signup links
-            .nav-phone-link {
-                display: none;
-            }
-            // Mobile Nav view start //
+            // Mobile Nav view
             @media only screen and (max-width: 745px) {
                 position: fixed;
-                overflow: scroll;
+                overflow-y: scroll;
                 top: -1000%;
                 right: 0;
                 width: 100%;
                 height: 100%;
                 padding: 5rem;
-                // background-color: $accent-color;
                 background-color: $dark-color1;
                 transition: .5s;
                 z-index: 100;
-                ul li {
-                    display: block;
-                    text-align: center;
-                    margin: 0 0 30px 0;
-                    font-size: $h4-font;
-                    a {
-                        color: $white-color;
-                    }
-                    &.active a {
-                        color: $primary-color !important;
-                    }
-                }
-                // Login and signup links
-                .nav-phone-link {
-                    display: block;
-                    margin-top: 60px;
-                    text-transform: none;
-                    a {
-                        display: inline-block;
-                        color: $primary-color;
-                        background-color: $white-color;
-                        border-radius: 10px;
-                        padding: 10px 15px;
-                        &::after {
-                            display: none;
-                        }
-                        &:first-child {
-                            margin-bottom: 20px;
-                        }
-                    }
-                }
-                .close-menu {
-                    display: block;
-                    position: absolute;
-                    top: 1rem;
-                    right: 7.5%;
-                }
-            }
-            // Mobile Nav view ends //
-
-            li {
+                text-align: center;    
+            } 
+            .nav-link {
                 font-size: $button-md-font;
                 display: inline-block;
                 margin: 0 20px;
                 a {
                     position: relative;
                     padding: 5px 0;
-                    color: $dark-color3;
                     &:hover {
                         &::after {
                             width: 100%;
@@ -263,11 +218,57 @@ h5 {
                         @media only screen and (max-width: 745px) {
                             display: none;
                         }
+                    }   
+                }
+                // Mobile Nav view
+                @media only screen and (max-width: 745px) {
+                    display: block;
+                    margin: 0 0 30px 0;
+                    font-size: $h4-font;
+                    a {
+                        color: $white-color !important;
                     }
-                    
+                    &.active a {
+                        color: $primary-color !important;
+                    }
                 }
             }
-            
+            // Login and signup links
+            .nav-phone-link {
+                display: none;
+                // Mobile Nav view
+                @media only screen and (max-width: 745px) {
+                    display: block;
+                    margin-top: 60px;
+                    text-transform: none;
+                    font-size: $h4-font;
+                    a {
+                        display: inline-block;
+                        color: $primary-color;
+                        background-color: $white-color;
+                        border-radius: 10px;
+                        padding: 10px 15px;
+                        // &::after {
+                        //     // display: none;
+                        // }
+                        &:first-child {
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+            // Close menu icon
+            .close-menu {
+                display: none;
+                width: 40px;
+                height: 40px;
+                @media only screen and (max-width: 745px) {
+                    display: block;
+                    position: absolute;
+                    top: 1rem;
+                    right: 7.5%;
+                }
+            }
         }
         // Login and signup buttons
         .nav-btn {
@@ -281,6 +282,18 @@ h5 {
             }
         }
     }
+    .hero {
+        width: 85%;
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        &-content {
+            width: 100%;
+            text-align: center;
+        }
+    }
 }
 /*/---- Header Nav ends ----/*/
 
@@ -288,17 +301,65 @@ h5 {
 .footer {
     &-content {
         background-color: $dark-color1;
-        color: $white-color;
-        text-align: center;
+        color: $light-color;
         padding: 3rem 7.5%;
-        .footer-links {
-            margin: 40px 0;
-            li {
-                display: inline-block;
-                margin: 0 10px;
-                a {
-                    color: $white-color;
+        display: grid;
+        grid-gap: 20px;
+        a {
+            color: $light-color;
+        }
+        .footer-top,
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            .footer-links,
+            .footer-social {
+                li {
+                    display: inline-block;
+                    margin: 0 10px;
                 }
+            }
+        }
+        .footer-bottom {
+            @media only screen and (max-width: 585px) {
+                display: grid;
+                grid-gap: 20px;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+        // Horizontal line
+        hr {
+            border: 1px solid rgba(255, 255, 255, 0.2); // white color + 0.2 opacity
+        }
+        // Copyright
+        p {
+            text-align: center;
+        }
+        // Back to top 
+        .back-to-top {
+            text-align: center;
+            font-size: 10px;
+            color: $accent-color;
+            position: relative;
+            img {
+                width: 30px;
+                height: 30px;
+                transition: all 0.2s ease-in;
+            }
+            .circle {
+                position: absolute;
+                top: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 30px;
+                height: 30px;
+                background-color: $accent-color2;
+                border-radius: 50%;
+            }
+            &:hover img {
+                transform: translateY(-10px); // Push the icon to stay in the circle
             }
         }
     }

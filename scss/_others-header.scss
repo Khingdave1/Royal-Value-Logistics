@@ -1,8 +1,9 @@
 /*/---- Header begins ----/*/
 .header {
+    height: 90vh;
     nav {
         .nav-list {
-            li {
+            .nav-link {
                 &.active a {
                     color: $dark-color1;
                 }
@@ -11,10 +12,61 @@
                     &::after {
                         background: $dark-color1;;
                     }
-                    
                 }
+            }
+        }
+    }
+    .hero {
+        &-content {
+            h2 {
+                color: $light-color;
+                font-size: 300;
+                margin-bottom: 60px;
             }
         }
     }
 }
 /*/---- Header ends ----/*/
+
+/*/---- More begins ----/*/
+.more {
+    position: relative;
+    visibility: visible;
+    width: 80%;
+    margin: -3rem auto 0 auto;
+    padding: 1.8rem;
+    background-color: $white-color;
+    box-shadow: $box-shadow;
+    border-radius: 8px;
+    display: grid;
+    grid-gap: 20px;
+    @media only screen and (min-width: 745px) {
+        width: 50%;
+    }
+    h5 {
+        font-weight: 500;
+        color: $dark-color1;
+        cursor: pointer;
+        transition: all 0.5s ease-in;
+        // &:hover + p {
+        //     display: block;
+        // }
+        img {
+            float: right;
+            vertical-align: middle;
+            transform: rotate(-180deg);
+            &.show {
+                transform: rotate(0deg);
+            }
+        }
+    }
+    p {
+        display: none;
+        color: $dark-color2;
+        transition: all 0.5s ease-in;
+        &.show {
+            display: block;
+        }
+    }
+}
+/*/---- More ends ----/*/

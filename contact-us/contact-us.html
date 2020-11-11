@@ -8,21 +8,21 @@
     <meta name="keywords" content="...">
 
     <!-- Links -->
-    <link rel="stylesheet" href="../css/errand.css">
+    <link rel="stylesheet" href="../css/contact-us.css">
     <!-- Favicon -->
     <link rel="favicon icon" href="../img/logo.png">
 
     <!-- Title -->
-    <title>Errand Services</title>
+    <title>Contact Us</title>
 </head>
 <body>
     <div class="container">
         <!-- Header -->
-        <header class="header">
+        <header class="header" id="header">
             <nav>
                 <!-- Logo -->
-                <a href="#" class="logo">
-                    <img src="../img/header-logo-white.png" alt="logo" class="logo-large">
+                <a href="../index.html" class="logo">
+                    <img src="../img/logo-large-white.png" alt="logo" class="logo-large">
                     <img src="../img/logo-white.png" alt="logo" class="logo-small">
                 </a>
                 <!-- Hamburger menu -->
@@ -32,9 +32,9 @@
                 <!-- Nav Links -->
                 <div class="nav-list">
                     <ul class="uppercase">
-                        <li class="nav-link"><a href="#">Home</a></li>
-                        <li class="nav-link active"><a href="#">Services</a></li>
-                        <li class="nav-link"><a href="#">Contact us</a></li>
+                        <li class="nav-link"><a href="../index.html">Home</a></li>
+                        <li class="nav-link"><a href="#">Services</a></li>
+                        <li class="nav-link active"><a href="contact-us.html">Contact us</a></li>
 
                         <!-- Login and signup links for phone view -->
                         <li class="nav-phone-link">
@@ -43,7 +43,7 @@
                         </li>
                     </ul>
                     <!-- Close menu icon -->
-                    <a href="#"><img src="../img/close.svg" alt="icon" class="close-menu"></a>
+                    <a href="#"><img src="../img/svg/close.svg" alt="icon" class="close-menu"></a>
                 </div>
                 <!-- Login and signup buttons -->
                 <div class="nav-btn uppercase">
@@ -51,28 +51,53 @@
                     <a href="#" class="btn sec2-btn">Sign up</a>
                 </div>
             </nav>
-            <!-- <div class="hero">
+            <div class="hero">
                 <div class="hero-content">
-                    <h1>Royal Quality<br>Logistics Services</h1>
-                    <p>Currently in Ilorin, Nigeria</p>
-                    <div class="hero-btn uppercase">
-                        <a href="#" class="btn prim-btn">Make a request</a>
-                    </div>
-                </div>
-            </div> -->
+                    <h2>Contact Us</h2>
+            </div>
         </header>
 
+        <!-- Faqs -->
+        <section class="sect">
+            <div class="sect-heading">
+                <h2>FAQs</h2>
+            </div>
+        </section>
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-content">
-                <a href="../index.html"><img src="../img/logo-white.png" alt="logo"></a>
-                <ul class="footer-links uppercase">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact us</a></li>
-                </ul>
-                <p>Copyright(c) 2020</p> 
-                <!-- Use js to set the copyright date -->
+                <div class="footer-top">
+                    <a href="../index.html"><img src="../img/logo-large-white.png" alt="logo"></a>
+                    <a href="#header" class="back-to-top uppercase">
+                        <img src="../img/svg/arrow-up.svg" alt="">
+                        <p>Back to top</p>
+                        <span class="circle"></span> 
+                    </a>
+                </div>
+                <hr>
+                <div class="footer-bottom">
+                    <!-- Page links -->
+                    <ul class="footer-links uppercase">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../services/lifting-service/lifting-service.html">Services</a></li>
+                        <li><a href="contact-us.html">Contact us</a></li>
+                    </ul>
+
+                    <!-- Social links -->
+                    <ul class="footer-social">
+                        <li>
+                            <a href="#"><img src="../img/svg/fb.svg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="../img/svg/tw.svg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="../img/svg/ig.svg" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <p>Copyright(c) <span id="copyright"></span></p> 
             </div>
         </footer>
     </div>

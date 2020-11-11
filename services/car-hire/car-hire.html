@@ -18,11 +18,11 @@
 <body>
     <div class="container">
         <!-- Header -->
-        <header class="header">
+        <header class="header" id="header">
             <nav>
                 <!-- Logo -->
                 <a href="../../index.html" class="logo">
-                    <img src="../../img/header-logo-white.png" alt="logo" class="logo-large">
+                    <img src="../../img/logo-large-white.png" alt="logo" class="logo-large">
                     <img src="../../img/logo-white.png" alt="logo" class="logo-small">
                 </a>
                 <!-- Hamburger menu -->
@@ -43,7 +43,7 @@
                         </li>
                     </ul>
                     <!-- Close menu icon -->
-                    <a href="#"><img src="../../img/close.svg" alt="icon" class="close-menu"></a>
+                    <a href="#"><img src="../../img/svg/close.svg" alt="icon" class="close-menu"></a>
                 </div>
                 <!-- Login and signup buttons -->
                 <div class="nav-btn uppercase">
@@ -51,27 +51,131 @@
                     <a href="#" class="btn sec2-btn">Sign up</a>
                 </div>
             </nav>
-            <!-- <div class="hero">
+            <div class="hero">
                 <div class="hero-content">
-                    <h1>Royal Quality<br>Logistics Services</h1>
-                    <p>Currently in Ilorin, Nigeria</p>
+                    <h2>Car Hire</h2>
                     <div class="hero-btn uppercase">
-                        <a href="#" class="btn prim-btn">Make a request</a>
+                        <a href="#" class="btn sec2-btn">Hire a car</a>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </header>
+
+        <!-- More about the service -->
+        <div class="more">
+            <h5>More about this service <img src="../../img/svg/chevron-up.svg" alt="" class="chevron-up"></h5>
+            <p>Auctor vitae scelerisque dictumst id lacus. Id sit massa quis ut in eros auctor lacus, nascetur. Viverra consectetur pellentesque vitae a quam euismod a tincidunt. Elit, turpis ligula sed fermentum eleifend vel condimentum ac. Nunc tempus, bibendum diam adipiscing diam vel. Libero gravida tempor sed tortor feugiat. A, non euismod ultricies tellus purus neque neque</p>
+        </div>
+
+        <!-- Available cars -->
+        <section class="available-cars sect">
+            <div class="sect-heading">
+                <h2>How it works</h2>
+            </div>
+            <div class="available-cars-content">
+                <div class="car-list">
+                    <div class="car-item">
+                        <img src="../../img/car-hire/car1.png" alt="">
+                        <div class="car-text">
+                            <p class="car-name">Honda Accord</p>
+                            <p class="car-price">$45/hr</p>
+                        </div>                    
+                    </div>
+                    <div class="car-item">
+                        <img src="../../img/car-hire/car2.png" alt="">
+                        <div class="car-text">
+                            <p class="car-name">Audi Series A</p>
+                            <p class="car-price">$45/hr</p>
+                        </div>
+                    </div>
+                    <div class="car-item">
+                        <img src="../../img/car-hire/car3.png" alt="">
+                        <div class="car-text">
+                            <p class="car-name">Lexus L50</p>
+                            <p class="car-price">$45/hr</p>
+                        </div>
+                    </div>
+                    <div class="car-item">
+                        <img src="../../img/car-hire/car4.png" alt="">
+                        <div class="car-text">
+                            <p class="car-name">Mercedes Benz G30c</p>
+                            <p class="car-price">$45/hr</p>
+                        </div> 
+                    </div>
+                </div>
+                <div class="view-more">
+                    <a href="#" class="btn prim-btn uppercase">View more</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Drivers -->
+        <section class="drivers">
+            <div class="drivers-content">
+                <div class="driver-text">
+                    <h3>We also have drivers available for hires</h3>
+                    <p>Nulla varius duis pellentesque egestas sagittis purus. Enim dolor massa eget rhoncus. Egestas vulputate in vel nibh alique.</p>
+                    <a href="#" class="btn prim-btn uppercase">See our drivers</a>
+                </div>
+                <div class="driver-img">
+                    <img src="../../img/car-hire/driver-group.png" alt="">
+                </div>
+                <div class="driver-bg">
+                    <img src="../../img/car-hire/rectangle-big.png" alt="">
+                    <img src="../../img/car-hire/rectangle-small.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- Download app -->
+        <section class="download">
+            <div class="download-content">
+                <h2>Use our Car hire service better <br>by using our app</h2>
+                <div class="download-buttons">
+                    <a href="#"><img src="../../img/google-play.png" alt="google-play"></a>
+                    <a href="#"><img src="../../img/app-store.png" alt="app-store"></a>
+                </div>
+            </div>
+            <div class="download-phone">
+                <img src="../../img/phone-view.png" alt="phone">
+            </div>
+        </section>
 
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-content">
-                <a href="../../index.html"><img src="../../img/logo-white.png" alt="logo"></a>
-                <ul class="footer-links uppercase">
-                    <li><a href="../../index.html">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="../../contact-us/contact-us.html">Contact us</a></li>
-                </ul>
-                <p>Copyright(c) <span id="copyright"></span></p>
+                <div class="footer-top">
+                    <a href="index.html"><img src="../../img/logo-large-white.png" alt="logo"></a>
+                    <a href="#header" class="back-to-top uppercase">
+                        <img src="../../img/svg/arrow-up.svg" alt="">
+                        <p>Back to top</p>
+                        <span class="circle"></span> 
+                    </a>
+                </div>
+                <hr>
+                <div class="footer-bottom">
+                    <!-- Page links -->
+                    <ul class="footer-links uppercase">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services/lifting-service/lifting-service.html">Services</a></li>
+                        <li><a href="contact-us/contact-us.html">Contact us</a></li>
+                    </ul>
+
+                    <!-- Social links -->
+                    <ul class="footer-social">
+                        <li>
+                            <a href="#"><img src="../../img/svg/fb.svg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="../../img/svg/tw.svg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="../../img/svg/ig.svg" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <p>Copyright(c) <span id="copyright"></span></p> 
             </div>
         </footer>
     </div>
@@ -79,5 +183,15 @@
 
 
 <script src="../../js/app.js"></script>
+
+<script>
+    const moreHeading = document.querySelector('.more h5');
+    const morePara = document.querySelector('.more p');
+    const arrowUp = document.querySelector('.chevron-up');
+    moreHeading.addEventListener('click', () => {
+        morePara.classList.toggle('show');
+        arrowUp.classList.toggle('show');
+    });
+</script>
 </body>
 </html>
