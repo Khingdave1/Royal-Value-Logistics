@@ -37,7 +37,7 @@
     padding: 1.8rem;
     background-color: $white-color;
     box-shadow: $box-shadow;
-    border-radius: 8px;
+    border-radius: $border-radius;
     display: grid;
     grid-gap: 20px;
     @media only screen and (min-width: 745px) {

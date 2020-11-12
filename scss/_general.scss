@@ -78,13 +78,16 @@ h5 {
 h6 {
     font-size: $h6-font;
     font-weight: 500;
+    // @media only screen and (max-width: 745px) {
+    //     font-size: $h6-font - 2;
+    // }
 }
 /*/---- Heading ends ----/*/
 
 /*/---- Buttons begins ----/*/
 .btn {
     display: inline-block;
-    border-radius: 4px;
+    border-radius: $border-radius - 4;
     padding: 10px 20px !important;
     // btn with the primary-color
     &.prim-btn {

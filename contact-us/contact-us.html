@@ -58,11 +58,52 @@
         </header>
 
         <!-- Faqs -->
-        <section class="sect">
+        <section class="faqs sect">
             <div class="sect-heading">
                 <h2>FAQs</h2>
             </div>
+            <div class="faqs-list">
+                <div class="faqs-item">
+                    <span>
+                        <h6>
+                            <img src="../img/contact/double-dot.png" alt="" class="dot dot-double">
+                            <!-- <img src="../img/contact/dot.png" alt="" class="dot dot-single"> -->
+                            A random question you want to know something about
+                        </h6>
+                        <img src="../img/contact/plus.svg" class="plus">
+                    </span>
+                    <p class="yes">Facilisi lacus, non etiam tempus ut ut purus adipiscing. Ipsum malesuada ipsum at in neque justo, vitae sit. Quis arcu aliquet nulla odio vestibulum malesuada. Id rhoncus congue purus non auctor. Suspendisse praesent turpis molestie tristique quam turpis facilisis. Quis purus egestas condimentum risus commodo, vitae quam. Risus scelerisque lacinia ut vulputate magna rhoncus. Non quis mus pulvinar in a. Quis eleifend odio sit arcu egestas varius eget. Ultrices velit semper nibh dignissim in arcu leo. Vel augue tellus tellus eu, augue tristique arcu. Iaculis diam, augue consectetur nec morbi cras. Nullam nec praesent nulla elit, feugiat aliquet tempor est. Donec fermentum non magna ultricies egestas habitasse. Ullamcorper quam sit tempus risus, pharetra, congue et, risus. Ultrices lacus, est arcu, interdum sapien semper.</dd>
+                </div>
+                <div class="faqs-item">
+                    <span>
+                        <h6><img src="../img/contact/double-dot.png" alt="" class="dot">A random question you want to know something about</h6>
+                        <img src="../img/contact/plus.svg" class="plus">
+                    </span>
+                    <p class="yes">Facilisi lacus, non etiam tempus ut ut purus adipiscing. Ipsum malesuada ipsum at in neque justo, vitae sit. Quis arcu aliquet nulla odio vestibulum malesuada. Id rhoncus congue purus non auctor. Suspendisse praesent turpis molestie tristique quam turpis facilisis. Quis purus egestas condimentum risus commodo, vitae quam. Risus scelerisque lacinia ut vulputate magna rhoncus. Non quis mus pulvinar in a. Quis eleifend odio sit arcu egestas varius eget. Ultrices velit semper nibh dignissim in arcu leo. Vel augue tellus tellus eu, augue tristique arcu. Iaculis diam, augue consectetur nec morbi cras. Nullam nec praesent nulla elit, feugiat aliquet tempor est. Donec fermentum non magna ultricies egestas habitasse. Ullamcorper quam sit tempus risus, pharetra, congue et, risus. Ultrices lacus, est arcu, interdum sapien semper.</dd>
+                </div>
+            </div>
         </section>
+
+        <!-- contact -->
+        <section class="contact">
+            <div class="contact-heading">
+                <h3>You still have a question?</h3>
+                <p>If you cannot find your answer in our FAQ you can always contact us. We are opened and readily available to answer your query</p>
+            </div>
+            <div class="contact-options">
+                <div class="contact-item">
+                    <img src="../img/contact/phone.svg" alt="">
+                    <h6>+234 (0) 803 736 2731</h6>
+                    <p>We are always  available to help</p>
+                </div>
+                <div class="contact-item">
+                    <img src="../img/contact/at.svg" alt="">
+                    <h6>contact@royaldelivery.com</h6>
+                    <p>This is the best way to contact us</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-content">
@@ -105,5 +146,16 @@
 
 
 <script src="../js/app.js"></script>
+<script>
+    const faqsHeadings = document.querySelectorAll('.faqs-item span');
+    const faqsParas = document.querySelectorAll('.faqs span + p');
+function showFaqs() {
+    // this.classList.toggle('show');
+    // faqsPara.classList.toggle('show');
+    faqsParas.forEach(n => n.classList.toggle('show'));
+    // this.classList.toggle('show');
+}
+faqsHeadings.forEach(n => n.addEventListener('click', showFaqs));
+</script>
 </body>
 </html>

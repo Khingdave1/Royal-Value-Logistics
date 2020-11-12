@@ -1,0 +1,79 @@
+/*/---- Import ----/*/
+@import '../scss/variables';
+@import '../scss/general';
+@import '../scss/others-header';
+
+.container {
+    height: 100vh;
+    overflow-y: scroll;
+    background: $gradient-color;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+/*/---- Login starts ----/*/
+.login {
+    color: $dark-color1;
+    background-color: $white-color;
+    width: 310px;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    padding: 1.5rem;
+    margin: 7.5%;
+    @media only screen and (max-width: 450px) {
+        width: 100%;    
+    } 
+    .logo {
+        // width: 2rem;
+        // height: 3rem;
+        margin-bottom: 1.5rem;
+    }
+    &-heading {
+        p {
+            margin-bottom: 0.5rem;
+            font-size: $button-md-font;
+        }
+    }
+    &-method {
+        margin: 1.5rem 0;
+        a {
+            font-size: $button-md-font;
+            color: $white-color;
+            display: block;
+            text-align: center;
+            &:first-child {
+                margin-bottom: 0.5rem;
+            }
+            img {
+                vertical-align: middle;
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+            }
+        }
+        .google {
+            background-color: #EA4335;
+            &:hover {
+                background-color: rgba(234, 67, 53, 0.86);
+            }
+        }
+        .facebook {
+            background-color: #395185;
+            &:hover {
+                background-color: rgba(57, 81, 133, 0.86);
+            }
+        }
+    }
+    .extra {
+        a {
+            color: $primary-color;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+/*/---- Login ends ----/*/
+
