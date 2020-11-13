@@ -22,3 +22,11 @@ closeMenu.addEventListener('click', () => {
 // Update the element to the current year //
 document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()));
 
+/*===== SERVICE DROPDOWN =====*/
+const serviceLink = document.querySelector('.service');
+const serviceList = document.querySelector('.service div');
+
+serviceLink.addEventListener('click', () => {
+    serviceList.classList.toggle('drop');
+});
+
