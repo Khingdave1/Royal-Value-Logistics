@@ -72,16 +72,18 @@
         display: grid;
         place-items: center;
         text-align: center;
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-        grid-gap: 3rem;
+        grid-gap: 3rem;   
+        @media only screen and (min-width: 745px) {
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        } 
         .contact-item {
-            width: 60%;
+            width: 100%;
             padding: 2rem;
             background-color: $white-color;
             border-radius: $border-radius;
             box-shadow: $box-shadow;
-            @media only screen and (max-width: 745px) {
-                width: 100%;   
+            @media only screen and (min-width: 745px) {
+                width: 70%;
             } 
             h6 {
                 margin: 1rem 0;
