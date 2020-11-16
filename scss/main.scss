@@ -30,49 +30,81 @@
                 }
             }
             .service {
+                // Chevron up
+                a .chevron-up {
+                    display: none;
+                    @media only screen and (max-width: 745px) {
+                        display: inline-block;
+                        transform: rotate(-180deg);
+                    }
+                    &.rotate {
+                        transform: rotate(0deg);
+                    }
+                }
+                // Dropdown content
                 div {
                     display: none;
-                    position: absolute;
-                    top: 80px;
-                    left: 0;
-                    width: 100%;
-                    background: rgba(255, 255, 255, 0.9);
-                    backdrop-filter: blur(10px);
-                    z-index: 100;
-                    ul {
-                        width: 85%;
-                        margin: 5rem auto;
-                        display: flex;
-                        flex-flow: row wrap;
-                        justify-content: space-around;
-                        align-content: center;
-                        align-items: center;
-                        list-style-image: url('../img/list-style.png');
-                        li {
-                            width: 200px;
+                    // From width 0 - 745px
+                    li {
+                        margin: 1rem 0;
+                        padding: 0.5rem 0;
+                        border-bottom: 1px solid $light-color;
+                        a {
                             text-transform: none;
-                            h6 {
-                                color: $dark-color1;
-                            }
                             p {
-                                color: $dark-color2;
-                                font-size: $button-md-font - 2;
-                                line-height: 20px;
-                                margin: 20px 0;
-                            }
-                            a {
-                                color: $dark-color1;
-                                &::after {
-                                    display: none;
+                                display: none;
+                            } 
+                        }
+                    }
+                    // Big screen starts //
+                    @media only screen and (min-width: 745px) {
+                        position: absolute;
+                        top: 80px;
+                        left: 0;
+                        width: 100%;
+                        background: rgba(255, 255, 255, 0.9);
+                        backdrop-filter: blur(10px);
+                        z-index: 100;
+                        ul {
+                            width: 85%;
+                            margin: 3rem auto;
+                            display: flex;
+                            flex-flow: row wrap;
+                            justify-content: space-around;
+                            align-content: center;
+                            align-items: center;
+                            li {
+                                width: 200px;
+                                text-transform: none;
+                                list-style-image: url('../img/list-style.png');
+                                a {
+                                    &::after {
+                                        display: none;
+                                    }
+                                    h6 {
+                                        color: $dark-color1;
+                                    }
+                                    p {
+                                        color: $dark-color2;
+                                        font-size: $button-md-font - 2;
+                                        line-height: 20px;
+                                        margin: 20px 0;
+                                        display: block;
+                                    }
+                                    .btn {
+                                        color: $dark-color1;
+                                    }
                                 }
                             }
-                        }
-                    }  
+                        }  
+                    }
+                    // Big screen ends //
                     &.drop {
                         display: block;
-                    } 
+                    }
+                    
+                    
                 }
-                
             }
         }
     }

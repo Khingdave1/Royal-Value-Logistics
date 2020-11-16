@@ -1,12 +1,19 @@
 /*/---- Font ----/*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
+/*/ ---- Mixins starts ----/*/
+@mixin transition {
+    transition: all 0.3s ease-in;
+}
+/*/ ---- Mixins ends ----/*/
+
 /*/---- General begins ----/*/
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    list-style: none;
 }
 html {
     scroll-behavior: smooth;
@@ -19,7 +26,7 @@ body {
     position: relative;
 }
 .uppercase {
-    text-transform: uppercase;;
+    text-transform: uppercase;
 }
 .sect {
     width: 85%;
@@ -71,6 +78,10 @@ h3 {
         font-size: $h3-font - 5;
     }
 }
+h4 {
+    font-size: $h4-font;
+    font-weight: normal;
+}
 h5 {
     font-size: $h5-font;
     font-weight: 400;
@@ -88,7 +99,9 @@ h6 {
 .btn {
     display: inline-block;
     border-radius: $border-radius - 4;
-    padding: 10px 20px !important;
+    padding: 0.625rem 1.25rem; // i removed !important
+    text-align: center;
+    @include transition;
     // btn with the primary-color
     &.prim-btn {
         background-color: $primary-color;
@@ -101,7 +114,7 @@ h6 {
         border: 1px solid $dark-color1;
         color: $dark-color1;
         &:hover {
-            background-color: $light-color + 96.5%;
+            background-color: rgba(23, 15, 70, 0.075);
         }
     }
     &.sec2-btn {
@@ -117,6 +130,30 @@ h6 {
         &:hover {
             background-color: $light-color + 8.5%;
             box-shadow: $box-shadow;
+        }
+    }
+    &.dark-btn {
+        background-color: $dark-color1;
+        color: $white-color;
+        font-size: $button-md-font;
+        &:hover {
+            background-color: $dark-color2;
+        }
+    }
+    &.trans-btn { //Transparent
+        font-size: $button-md-font;
+        background-color: transparent;
+        color: $dark-color1;
+        border: 1px solid transparent;
+        &:hover {
+            border: 1px solid $dark-color1;
+        }
+    }
+    &.danger-btn {
+        background-color: $danger-color;
+        color: $white-color;
+        &:hover {
+            background-color: $danger-color + 28.5%;
         }
     }
 }
@@ -202,6 +239,9 @@ h6 {
                 font-size: $button-md-font;
                 display: inline-block;
                 margin: 0 20px;
+                @media only screen and (max-width: 1015px) {
+                    font-size: $button-md-font - 2;
+                }
                 a {
                     position: relative;
                     padding: 5px 0;
@@ -251,9 +291,6 @@ h6 {
                         background-color: $white-color;
                         border-radius: 10px;
                         padding: 10px 15px;
-                        // &::after {
-                        //     // display: none;
-                        // }
                         &:first-child {
                             margin-bottom: 20px;
                         }
@@ -277,8 +314,16 @@ h6 {
         .nav-btn {
             font-size: $button-md-font;
             // Hide the login and sign up button on small view
+            @media only screen and (max-width: 1015px) {
+                font-size: $button-md-font - 2;
+            }
             @media only screen and (max-width: 745px) {
                 display: none;
+            }
+            .btn {
+                @media only screen and (max-width: 1015px) {
+                    padding: 0.525rem 1.05rem !important;
+                }
             }
             .btn:first-child {
                 margin-right: 10px;
