@@ -1,0 +1,212 @@
+/*/---- Import ----/*/
+@import '../../scss/control-panel';
+
+/*/---- Variables ----/*/
+$grey-color1: #D9D9D9;
+$grey-color2: #BFBFBF;
+
+/*/---- Sidenav starts ----/*/
+// Style is in _control-panel.scss
+/*/---- Sidenav ends ----/*/
+
+/*/---- Main start ----/*/
+main {
+    // Analytics
+    .client-area {
+        background-color: $white-color;
+        border-radius: $border-radius + 8;
+        padding: 1.5rem;
+        &-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            &-right {
+                display: flex;
+                .client-search,
+                .client-filter {
+                    border-radius: $border-radius - 4;
+                    border: 1px solid $grey-color1;
+                    padding: 0.25rem;
+                    @include transition(0.2s);
+                    &:hover {
+                        border: 1px solid $dark-color1;
+                    }
+                }
+                .client-search {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 0.5rem;
+                    img {
+                        width: 18px;
+                        height: 18px;
+                    }
+                    input {
+                        border: none;
+                        outline: none;
+                        padding: 0.25rem;
+                        font-size: $button-md-font;
+                        // background-color: transparent;
+                        &::placeholder {
+                            color: $grey-color2;
+                        }
+                    }
+                }
+                .client-filter {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    width: 100px;
+                    cursor: pointer;
+                    
+                    &.dropdown {
+                        .dropbtn {
+                            font-size: $button-md-font;
+                            color: $grey-color2;
+                            display: flex;
+                            align-items: center;
+                            img {
+                                width: 15px;
+                                height: 15px;
+                                @include transition(0.2s);
+                            }
+                        }
+                        .dropdown-content {
+                            display: none;
+                            position: absolute;
+                            top: 105%;
+                            background-color: #f9f9f9;
+                            width: 100%;
+                            box-shadow: $box-shadow;
+                            z-index: 1;
+                            & a {
+                                font-size: 13.33px;
+                                color: $dark-color1;
+                                padding: 10px 12px;
+                                display: block;
+                                font-weight: normal;
+                                white-space: pre;
+                                min-height: 1.2em;
+                                &:hover {
+                                    background-color: $primary-color;
+                                    color: $white-color;
+                                }
+                            }            
+                        }
+                    }
+                    &:hover {
+                        .dropdown-content {
+                            display: block;
+                        }
+                        img {
+                            transform: rotate(-180deg);
+                        }
+                    }
+                }
+            }
+        }
+        &-body {
+            .client-list {
+                display: grid;
+                grid-gap: 2rem;
+                li {
+                    display: flex;
+                    align-items: center;
+                    padding: 0.8rem;
+                    border-radius: $border-radius;
+                    width: 100%;
+                    &.client-table-heading {
+                        background-color: $light-color;
+                        color: $dark-color1;
+                        p {
+                            font-weight: 400;
+                        }
+                    }
+                    &.client-item {
+                        border: 1px solid #E0E0E0;
+                        color: $dark-color2;
+                        font-size: $button-md-font;
+                        @include transition(0.2s);
+                        &:hover {
+                            border: 1px solid $dark-color1;
+                        }
+                    }
+                    p {
+                        margin-right: 2%;
+                        &:last-child { // remove the margin for the last p
+                            margin-right: 0;
+                        }
+                        &.name {
+                            // width: 10%;
+                            flex-basis: 15%;
+                        }
+                        &.email {
+                            // width: 30%;
+                            flex-basis: 20%;
+                        }
+                        &.address {
+                            // width: 20%;
+                            flex-basis: 20%;
+                        }
+                        &.number {
+                            // width: 10%;
+                            flex-basis: 15%;
+                        }
+                        &.status {
+                            // width: 10%;
+                            flex-basis: 10%;
+                        }
+                        &.action {
+                            width: 100%;
+                            flex-basis: 20%;
+                            .btn {
+                                padding: 0.325rem !important;
+                                font-size: $button-md-font - 4;
+                                &.sec1-btn {
+                                    border-radius: 4px 0px 0px 4px;
+                                    width: 30%;
+                                }
+                                &.dark-btn {
+                                    border-radius: 0px;
+                                    border: 1px solid $dark-color1;
+                                    margin-left: -5px;
+                                    width: 30%;
+                                }
+                                &.danger-btn {
+                                    border-radius: 0px 4px 4px 0px;
+                                    border: 1px solid $danger-color;
+                                    margin-left: -5px;
+                                    width: 40%;
+                                }
+                            }
+                        }
+                    }   
+                } 
+            }
+            .pagination {
+                display: flex;
+                align-items: center;
+                margin-top: 3rem;
+                a {
+                    margin-right: 20px;
+                    color: #828282;
+                    font-size: $button-md-font;
+                    @include transition(0.2s);
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    &.active,
+                    &:hover {
+                        color: $dark-color1;
+                    }
+                    img {
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+/*/---- Main ends ----/*/
+

@@ -1,0 +1,189 @@
+/*/---- Import ----/*/
+@import '../../scss/variables';
+@import '../../scss/general';
+
+/*/ ---- Mixins starts ----/*/
+@mixin transition($time) {
+    transition: all $time ease-in;
+}
+/*/ ---- Mixins ends ----/*/
+body {
+    background-color: $light-color;
+}
+.container {
+    width: 100%;
+    position: relative;
+}
+/*/---- Sidenav starts ----/*/
+.sidenav {
+    background: $gradient-color;
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    padding: 1.5rem;
+    // Logo
+    &-logo {
+        display: inline-block;
+        margin-bottom: 20%;
+        img {
+            width: 100%;
+        }
+    }
+    // List and Settings
+    &-list,
+    &-settings {
+        a {
+            display: flex;
+            align-items: center;
+            color: $white-color;
+            padding: 10px;
+            font-size: $button-md-font;
+            p {
+                margin-left: 1rem;
+            }
+            img {
+                @media only screen and (max-width: 885px) {
+                    // width: 100%;
+                    // height: auto;
+                }
+            }
+        }
+    }
+    // List
+    &-list {
+        li {
+            margin-bottom: 0.5rem;
+            a,
+            img {
+                @include transition(0.4s);
+            }
+            a {
+                border-radius: $border-radius;
+                &:hover,
+                &.active {
+                    background-color: $white-color;
+                    color: $dark-color2;
+                    img {
+                        filter: brightness(0.20); 
+                    }
+                }
+            }
+        }
+    }
+    // Settings
+    &-settings {
+        position: absolute;
+        bottom: 2rem;
+        left: 1.5rem;
+        img {
+            transform: rotate(0deg);
+            @include transition(0.2s);
+        }
+        :hover img {
+            transform: rotate(360deg);
+        }
+        @media only screen and (max-width: 885px) {
+            left: 1rem;
+        }
+    }
+    @media only screen and (max-width: 885px) {
+        width: 10%;
+        padding: 1rem;
+        .sidenav-list,
+        .sidenav-settings {
+            text-align: center;
+            p {
+                display: none;
+            }
+        }
+    }
+}
+/*/---- Sidenav ends ----/*/
+
+/*/---- Main start ----/*/
+main {
+    position: absolute;
+    left: 20%;
+    width: 80%;
+    padding: 1.5rem;
+
+    @media only screen and (max-width: 885px) {
+        width: 90%;
+        left: 10%;
+    }
+    // Top Nav
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        &-left,
+        &-right {
+            display: flex;
+            align-items: center;
+        }
+        &-left {
+            padding: 4px;
+            @include transition(0.2s);
+            &:hover {
+                background-color: $white-color;
+                border-radius: $border-radius;
+            }
+            input {
+                border: none;
+                outline: none;
+                padding: 0.5rem;
+                font-size: $button-lg-font;
+                background-color: transparent;
+                &::placeholder {
+                    color: $dark-color3;
+                }
+            }
+        }
+        &-right {
+            a {
+                display: inline-block;
+                &:first-child {
+                    margin-right: 3rem;
+                }
+                img {
+                    border-radius: 50%;
+                    padding: 4px;
+                    @include transition(0.2s);
+                    &:hover {
+                        background-color: $white-color;
+                    }
+                }
+            }  
+        }
+    }
+    .main-sect {
+        display: grid;
+        grid-gap: 3rem;
+        &-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h6 {
+                color: $dark-color1;
+            }
+            .main-sect-btns {
+                .btn {
+                    img {
+                        vertical-align: middle;
+                        width: 20px;
+                        height: 20px;
+                    }
+                    &.trans-btn {
+                        margin-right: 0.5rem;
+                    }
+                }
+                
+            }
+        }
+        
+    }
+
+}
+/*/---- Main ends ----/*/
+
