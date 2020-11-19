@@ -10,28 +10,7 @@
 main {
     // Analytics
     .analytics {
-        &-cards {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
-            align-content: center;
-            align-items: center;
-            text-align: center;    
-            .card {
-                padding: 2rem;
-                background-color: $white-color;
-                border-radius: $border-radius + 8;
-                width: 220px;
-                h4 {
-                    color: $dark-color1;
-                }
-                p {
-                    margin-top: 1rem;
-                    color: $accent-color;
-                    font-size: $button-md-font;
-                }
-            }
-        }
+        
     }
 
 }

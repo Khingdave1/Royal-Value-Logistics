@@ -1,0 +1,45 @@
+/*/---- Import ----/*/
+@import '../../scss/control-panel';
+
+/*/---- Table  starts ----/*/
+.table-area {
+    &-body {
+        .table-list {
+            li {
+                p {
+                    &.id {
+                        // width: 10%;
+                        flex-basis: 10%;
+                    }
+                    &.customer {
+                        // width: 30%;
+                        flex-basis: 20%;
+                    }
+                    &.receiver {
+                        // width: 10%;
+                        flex-basis: 20%;
+                    }
+
+                    &.address {
+                        // width: 10%;
+                        flex-basis: 25%;
+                    }
+                    &.status {
+                        flex-basis: 15%;
+                    }
+                    &.action {
+                        flex-basis: 10% !important;
+                        .btn {
+                            &.sec1-btn {
+                                border-radius: 4px !important;
+                                width: 100% !important;
+                            }
+                        }
+                    }
+                    //.action is in _control-panel.scss
+                }   
+            } 
+        }
+    }
+}
+/*/---- Table  ends ----/*/

@@ -8,36 +8,38 @@
     <meta name="keywords" content="...">
 
     <!-- Links -->
-    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/edit-client.css">
     <!-- Favicon -->
     <link rel="favicon icon" href="../../img/logo.png">
 
     <!-- Title -->
-    <title>Dashboard</title>
+    <title>Edit Clients</title>
 </head>
 <body>
     <div class="container">
         <!-- Side Nav -->
        <div class="sidenav">
+           <!-- Logo -->
            <a href="../../index.html" class="sidenav-logo">
                <img src="../../img/logo-large-white.png" alt="">
            </a>
+           <!-- Side Nav List -->
            <div class="sidenav-list">
                 <ul>
                     <li>
-                        <a href="dashboard.html" class="active">
+                        <a href="../dashboard/dashboard.html">
                             <img src="../img/svg/dashboard.svg" alt="">
                             <p>Dashboard</p>
                         </a>
                     </li>
                     <li>
-                        <a href="../client/client.html">
+                        <a href="client.html" class="active">
                             <img src="../img/svg/client.svg" alt="">
                             <p>Clients</p>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="../customer/customer.html">
                             <img src="../img/svg/customer.svg" alt="">
                             <p>Customers</p>
                         </a>
@@ -61,13 +63,14 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="../payment/payment.html">
                             <img src="../img/svg/payment.svg" alt="">
                             <p>Payments</p>
                         </a>
                     </li>
                 </ul>
            </div>
+           <!-- Settings -->
            <div class="sidenav-settings">
                 <a href="#">
                     <img src="../img/svg/settings.svg" alt="">
@@ -91,32 +94,36 @@
                </span>
            </div>
 
-           <!-- Analytics -->
-           <div class="analytics main-sect">
-               <div class="analytics-heading main-sect-heading">
+           <section class="main-sect">
+               <div class="main-sect-heading">
                    <div class="main-sect-heading-left">
-                        <h6>Overview Analytics</h6>
+                        <h5>Edit client</h5>
                     </div>
                </div>
-               <div class="main-cards">
-                   <div class="card">
-                       <h4>2,560</h4>
-                       <p>Customers</p>
-                   </div>
-                   <div class="card">
-                        <h4>302</h4>
-                        <p>Deliveries made</p>
-                    </div>
-                    <div class="card">
-                        <h4>734</h4>
-                        <p>Riders</p>
-                    </div>
-                    <div class="card dark-bg">
-                        <h4 class="white-text">N9.45m</h4>
-                        <p class="accent-text">Total earning</p>
-                    </div>
+               <div class="form-area">
+                   <form action="">
+                       <div class="full-name">
+                           <label for="full-name">Full name</label>
+                           <input type="text" placeholder="Idris Selvic" id="full-name" class="col-2" required>
+                       </div>
+                       <div class="email">
+                            <label for="email">Email</label>
+                            <input type="email" placeholder="selvicidris@gmail.com" id="email" class="col-2" required>
+                        </div>
+                        <div class="address">
+                            <label for="address">Address</label>
+                            <input type="text" placeholder="river close, jabi rd, Ilorin" id="address" class="col-2" required>
+                        </div>
+                        <div class="phone-no">
+                            <label for="phone-no">Phone number</label>
+                            <input type="number" placeholder="08025485621" id="phone-no" class="col-2" required>
+                        </div>
+                        <div class="form-btn">
+                            <button class="btn prim-btn" id="submit-btn">Edit</button>
+                        </div>
+                   </form>
                </div>
-           </div>
+           </section>
        </main>
         
     </div>
@@ -124,5 +131,37 @@
 
 <!-- Script -->
 <script src="js/app.js"></script>
+<script>
+    // Access DOM elements
+    const fullName = document.getElementById('full.name');
+    const email = document.getElementById('email');
+    const address = document.getElementById('address');
+    const phoneNumber = document.getElementById('phone-no');
+    const password = document.getElementById('password');
+    const confirmPassword = document.getElementById('confirm-password');
+    const bothPassword = document.querySelectorAll('.password');
+    const errorMessage = document.getElementById('error-msg');
+    const submitButton = document.getElementById('submit-btn');
+
+    function passwordConfirmation() {
+        if (password.value === confirmPassword.value) {
+                password.style.border = '1px solid #036c23';
+                confirmPassword.style.border = '1px solid #036c23';
+                passwordError.style.visibility = 'hidden';
+        } else {
+            password.style.border = '1px solid #EB5757';
+            confirmPassword.style.border = '1px solid #EB5757';
+
+            // Show alert
+            errorMessage.style.visibility = 'visible';
+            
+            // Hide alert after 3 seconds
+            setTimeout(function(){
+            errorMessage.style.visibility = 'hidden'; 
+            }, 3000);
+        }
+    }
+    confirmPassword.addEventListener('blur', passwordConfirmation);
+</script>
 </body>
 </html>

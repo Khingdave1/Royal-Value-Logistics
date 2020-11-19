@@ -8,12 +8,12 @@
     <meta name="keywords" content="...">
 
     <!-- Links -->
-    <link rel="stylesheet" href="../../css/add-client.css">
+    <link rel="stylesheet" href="../../css/create-rider.css">
     <!-- Favicon -->
     <link rel="favicon icon" href="../../img/logo.png">
 
     <!-- Title -->
-    <title>Add Clients</title>
+    <title>Create Riders</title>
 </head>
 <body>
     <div class="container">
@@ -33,7 +33,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="client.html" class="active">
+                        <a href="../client/client.html">
                             <img src="../img/svg/client.svg" alt="">
                             <p>Clients</p>
                         </a>
@@ -51,7 +51,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="../rider/rider.html">
+                        <a href="rider.html" class="active">
                             <img src="../img/svg/rider.svg" alt="">
                             <p>Riders</p>
                         </a>
@@ -96,9 +96,7 @@
 
            <section class="main-sect">
                <div class="main-sect-heading">
-                   <div class="main-sect-heading-left">
-                        <h5>Create Client</h5>
-                    </div>
+                   <h6>Create Rider</h6>
                </div>
                <div class="form-area">
                    <form action="">
@@ -120,15 +118,9 @@
                         </div>
                         <div class="password">
                             <label for="password">Password</label>
-                            <input type="password" placeholder="Password" id="password" class="password col-2" required>
+                            <input type="password" placeholder="Large Input" id="password" class="password col-2" required>
                             <p></p> <!-- empty -->
                             <p id="note" class="col-2">Password should contain atleast 8 characters</p> <!-- Work on this (js)-->
-                        </div>
-                        <div class="confirm-password">
-                            <label for="confirm-password">Confirm Password</label>
-                            <input type="password" placeholder="Confirm Password" id="confirm-password" class="password col-2" requireds>
-                            <p></p> <!-- empty -->
-                            <p id="error-msg" class="col-2">Passwords doesn't match</p>
                         </div>
                         <div class="form-btn">
                             <button class="btn prim-btn" id="submit-btn">Submit</button>

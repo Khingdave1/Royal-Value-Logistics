@@ -15,25 +15,16 @@ main {
                 li {
                     p {
                         &.name {
-                            // width: 10%;
-                            flex-basis: 15%;
+                            flex-basis: 25%;
                         }
-                        &.email {
-                            // width: 30%;
+                        &.model {
                             flex-basis: 20%;
                         }
-                        &.address {
-                            // width: 20%;
+                        &.cost {
                             flex-basis: 20%;
                         }
-                        &.number {
-                            // width: 10%;
-                            flex-basis: 15%;
-                        }
-
                         &.status {
-                            // width: 10%;
-                            flex-basis: 10%;
+                            flex-basis: 15%;
                         }
                         //.action is in _control-panel.scss
                     }   
