@@ -61,7 +61,7 @@ body {
 h1 {
     font-size: $h1-font;
     @media only screen and (max-width: 745px) {
-        font-size: $h1-font - 10;
+        font-size: $h1-font - 15;
     }
 }
 h2 {
@@ -331,7 +331,7 @@ h6 {
         }
     }
     .hero {
-        width: 85%;
+        width: 98%;
         margin: 0 auto;
         position: absolute;
         top: 50%;
