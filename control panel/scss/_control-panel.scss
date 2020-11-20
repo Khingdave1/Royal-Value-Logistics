@@ -68,8 +68,26 @@ body {
     &-logo {
         display: inline-block;
         margin-bottom: 20%;
+        // position: absolute;
+        // top: 2rem;
+        // left: 2rem;
+        // z-index: 5;
+        @media only screen and (max-width: 885px) {
+            margin-bottom: 3rem;
+        }
+        &-large {
+            @media only screen and (max-width: 885px) {
+                display: none;
+            }
+        }
+        &-small {
+            display: none;
+            @media only screen and (max-width: 885px) {
+                display: block;
+            }
+        }
         img {
-            width: 100%;
+            // width: 100%;
         }
     }
     // List and Settings
@@ -94,6 +112,7 @@ body {
     }
     // List
     &-list {
+        // margin-top: 5rem;
         li {
             margin-bottom: 0.5rem;
             a,
@@ -148,6 +167,24 @@ body {
             }
         }
     }
+    @media only screen and (max-width: 745px) {
+        // display: none;
+        // left: 0;
+        // position: absolute;
+        width: 60%;
+        top: 0;
+        left: -1000%;
+        transition: all 0.5s ease-in-out;
+        z-index: 999999;
+        overflow: scroll auto;
+        .sidenav-list,
+        .sidenav-settings {
+            text-align: center;
+            p {
+                display: block;
+            }
+        }
+    }
 }
 /*/---- Sidenav ends ----/*/
 
@@ -161,7 +198,27 @@ main {
         width: 90%;
         left: 10%;
     }
+    @media only screen and (max-width: 745px) {
+        width: 100%;
+        left: 0;
+    }
 
+    // MOBILE VIEW TOP
+    .mobile-view-top {
+        display: none;
+        margin-bottom: 2rem;
+        @media only screen and (max-width: 745px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .menu-icon {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+    }
+    
     // TOP NAV
     .top-nav {
         display: flex;
@@ -186,6 +243,9 @@ main {
                 padding: 0.5rem;
                 font-size: $button-lg-font;
                 background-color: transparent;
+                @media only screen and (max-width: 745px) {
+                    width: 100px;
+                }
                 &::placeholder {
                     color: $dark-color3;
                 }
@@ -273,6 +333,7 @@ main {
         .card {
             @include white-background;
             width: 220px;
+            margin-bottom: 2rem;
             @media only screen and (max-width: 745px) {
                 width: 100%;
             }
@@ -449,6 +510,8 @@ main {
             width: 100%;
             box-shadow: $box-shadow;
             z-index: 1;
+            // max-height: 100px;
+            overflow: hidden auto;
             & a {
                 font-size: 13.33px;
                 color: $dark-color1;

@@ -20,7 +20,8 @@
         <!-- Side Nav -->
        <div class="sidenav">
            <a href="../../index.html" class="sidenav-logo">
-               <img src="../../img/logo-large-white.png" alt="">
+               <img src="../../img/logo-large-white.png" alt="" class="sidenav-logo-large">
+               <img src="../../img/logo-white.png" alt="" class="sidenav-logo-small">
            </a>
            <div class="sidenav-list">
                 <ul>
@@ -78,6 +79,11 @@
 
        <!-- Main content -->
        <main>
+           <!-- Mobile view top -->
+           <div class="mobile-view-top">
+               <img src="../img/svg/bx-menu-alt-left.svg" alt="" class="menu-icon">
+               <a href="../../index.html"><img src="../../img/logo.png" alt=""></a>
+           </div>
            <!-- Top Nav -->
            <div class="top-nav">
                <span class="top-nav-left">
@@ -124,5 +130,16 @@
 
 <!-- Script -->
 <script src="js/app.js"></script>
+
+<script>
+    const menuIcon = document.querySelector('.menu-icon');
+    const sideNav = document.querySelector('.sidenav');
+    // menuIcon.addEventListener('click', () => {
+    //     sideNav.classList.toggle('show-sidenav');
+    // });
+    menuIcon.addEventListener('click', () => {
+        sideNav.style.left = "0";
+    });
+</script>
 </body>
 </html>

@@ -8,23 +8,25 @@
 
 /*/---- Main start ----/*/
 main {
-    // Analytics
     .order-grid {
         display: grid;
-        grid-gap: 1rem;
+        grid-gap: 3rem;
         @media only screen and (min-width: 745px) {
             grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1rem;
         }
         .order-services {
-            grid-column: 1 / span 2;
             display: grid;
             grid-gap: 1rem;
             @media only screen and (min-width: 745px) {
                 grid-template-columns: repeat(2, 1fr);
+                grid-column: 1 / span 2;
             }
             &-heading {
-                grid-column: 1 / span 2;
                 color: $dark-color1;
+                @media only screen and (min-width: 745px) {
+                    grid-column: 1 / span 2;
+                }
             }
             &-card {
                 @include dark-background;
@@ -65,9 +67,7 @@ main {
                     margin-bottom: 1rem;
                     @include table-item;
                     p {
-                        // &:nth-child(1) {
-                            flex-basis: 33.333%;
-                        // }
+                        flex-basis: 33.333%;
                     }
                 }
                 .view-more {
