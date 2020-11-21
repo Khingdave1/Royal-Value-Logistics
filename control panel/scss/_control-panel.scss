@@ -64,6 +64,35 @@ body {
     height: 100vh;
     position: fixed;
     padding: 1.5rem;
+    @media only screen and (max-width: 885px) {
+        width: 10%;
+        padding: 1rem;
+        .sidenav-list,
+        .sidenav-settings {
+            text-align: center;
+            p {
+                display: none;
+            }
+        }
+    }
+    @media only screen and (max-width: 745px) {
+        // display: none;
+        // left: 0;
+        // position: absolute;
+        width: 60%;
+        top: 0;
+        left: -1000%;
+        transition: all 0.5s ease-in-out;
+        z-index: 999999;
+        overflow-y: scroll;
+        .sidenav-list,
+        .sidenav-settings {
+            text-align: center;
+            p {
+                display: block;
+            }
+        }
+    }
     // Logo
     &-logo {
         display: inline-block;
@@ -86,9 +115,9 @@ body {
                 display: block;
             }
         }
-        img {
-            // width: 100%;
-        }
+        // img {
+        //     // width: 100%;
+        // }
     }
     // List and Settings
     &-list,
@@ -102,12 +131,12 @@ body {
             p {
                 margin-left: 1rem;
             }
-            img {
-                @media only screen and (max-width: 885px) {
-                    // width: 100%;
-                    // height: auto;
-                }
-            }
+            // img {
+            //     @media only screen and (max-width: 885px) {
+            //         // width: 100%;
+            //         // height: auto;
+            //     }
+            // }
         }
     }
     // List
@@ -155,34 +184,23 @@ body {
         @media only screen and (max-width: 885px) {
             left: 1rem;
         }
-    }
-    @media only screen and (max-width: 885px) {
-        width: 10%;
-        padding: 1rem;
-        .sidenav-list,
-        .sidenav-settings {
-            text-align: center;
-            p {
-                display: none;
-            }
+        @media only screen and (max-width: 745px) {
+            display: none;
         }
     }
-    @media only screen and (max-width: 745px) {
-        // display: none;
-        // left: 0;
-        // position: absolute;
-        width: 60%;
-        top: 0;
-        left: -1000%;
-        transition: all 0.5s ease-in-out;
-        z-index: 999999;
-        overflow: scroll auto;
-        .sidenav-list,
-        .sidenav-settings {
-            text-align: center;
-            p {
-                display: block;
-            }
+    // CLOSE MENU
+    .close-menu {
+        display: none;
+        img {
+            width: 40px;
+            height: 40px;
+        }
+        @media only screen and (max-width: 745px) {
+            display: block;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            cursor: pointer;
         }
     }
 }

@@ -75,6 +75,9 @@
                     <p>Settings</p>
                 </a>
            </div>
+           <div class="close-menu">
+                <img src="../img/svg/close.svg" alt="" class="close-icon">
+           </div>
        </div>
 
        <!-- Main content -->
@@ -134,11 +137,18 @@
 <script>
     const menuIcon = document.querySelector('.menu-icon');
     const sideNav = document.querySelector('.sidenav');
+    const closeMenu = document.querySelector('.close-menu');
     // menuIcon.addEventListener('click', () => {
     //     sideNav.classList.toggle('show-sidenav');
     // });
+    // OPEN MENU
     menuIcon.addEventListener('click', () => {
         sideNav.style.left = "0";
+    });
+
+    // CLOSE MENU
+    closeMenu.addEventListener('click', () => {
+        sideNav.style.left = '-1000%';
     });
 </script>
 </body>
