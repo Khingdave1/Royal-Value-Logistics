@@ -1,0 +1,92 @@
+/*/---- Import ----/*/
+@import '../../scss/control-panel';
+
+
+/*/---- Riders Details  starts ----/*/
+.rider-details {
+    @include white-background;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    &-left {
+        &-name {
+            margin-bottom: 3rem;
+        } 
+        &-others {
+            display: flex;
+            align-items: center;
+            img {
+                margin-right: 3rem;
+            }
+            ul li {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                margin-bottom: 1rem;
+                p {
+                    font-size: $button-md-font;
+                    color: $dark-color2;
+                    &:first-child {
+                        margin-right: 2rem;
+                    }
+                    &:last-child {
+                        grid-column: 2 / span 3;
+                    }
+                }     
+            }
+        } 
+    }
+    &-right {
+        .btn {
+            font-size: $button-md-font;
+            &:first-child {
+                margin-right: 0.5rem;
+            }
+        }
+        
+    } 
+}
+/*/---- Riders Details  ends ----/*/
+
+/*/---- Table  starts ----/*/
+.table-area {
+    &-body {
+        .table-list {
+            li {
+                p {
+                    &.id {
+                        // width: 10%;
+                        flex-basis: 15%;
+                    }
+                    &.package {
+                        // width: 30%;
+                        flex-basis: 30%;
+                    }
+                    &.address {
+                        // width: 10%;
+                        flex-basis: 30%;
+                    }
+
+                    &.status {
+                        // width: 10%;
+                        flex-basis: 15%;
+                    }
+                    &.action {
+                        flex-basis: 10% !important;
+                        .btn {
+                            &.sec1-btn {
+                                border-radius: 4px !important;
+                                width: 100% !important;
+                            }
+                        }
+                    }
+                    //.action is in _control-panel.scss
+                }   
+            } 
+        }
+    }
+}
+/*/---- Table  ends ----/*/
+
+

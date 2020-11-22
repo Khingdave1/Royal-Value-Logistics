@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="...">
+    <meta name="keywords" content="...">
+
+    <!-- Links -->
+    <link rel="stylesheet" href="../../css/rider.css">
+    <!-- Favicon -->
+    <link rel="favicon icon" href="../../img/logo.png">
+
+    <!-- Title -->
+    <title>Riders</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Side Nav -->
+       <div class="sidenav">
+           <!-- Logo -->
+           <a href="../../index.html" class="sidenav-logo">
+               <img src="../../img/logo-large-white.png" alt="" class="sidenav-logo-large">
+               <img src="../../img/logo-white.png" alt="" class="sidenav-logo-small">
+           </a>
+           <!-- Close menu -->
+           <div class="close-menu">
+                <img src="../img/svg/close.svg" alt="" class="close-icon">
+           </div>
+           <div class="sidenav-list">
+                <ul>
+                    <li>
+                        <a href="../dashboard/dashboard.html">
+                            <img src="../img/svg/dashboard.svg" alt="">
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../client/client.html">
+                            <img src="../img/svg/client.svg" alt="">
+                            <p>Clients</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../customer/customer.html">
+                            <img src="../img/svg/customer.svg" alt="">
+                            <p>Customers</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../vehicle/vehicle.html">
+                            <img src="../img/svg/vehicle.svg" alt="">
+                            <p>Vehicles</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="rider.html" class="active">
+                            <img src="../img/svg/rider.svg" alt="">
+                            <p>Riders</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../order/order.html">
+                            <img src="../img/svg/order.svg" alt="">
+                            <p>Orders</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../payment/payment.html">
+                            <img src="../img/svg/payment.svg" alt="">
+                            <p>Payments</p>
+                        </a>
+                    </li>
+                </ul>
+           </div>
+           <div class="sidenav-settings">
+                <a href="#">
+                    <img src="../img/svg/settings.svg" alt="">
+                    <p>Settings</p>
+                </a>
+           </div>
+       </div>
+
+       <!-- Main content -->
+       <main>
+           <!-- Mobile view top -->
+           <div class="mobile-view-top">
+               <img src="../img/svg/bx-menu-alt-left.svg" alt="" class="menu-icon">
+               <a href="../../index.html"><img src="../../img/logo.png" alt=""></a>
+           </div>
+           <!-- Top Nav -->
+           <div class="top-nav">
+               <span class="top-nav-left">
+                   <img src="../img/svg/search.svg" alt="search">
+                   <!-- <p>You can search here...</p> -->
+                   <input type="text" class="top-search" placeholder="You can search here...">
+               </span>
+               <span class="top-nav-right">
+                   <a href="#"><img src="../img/svg/notification.svg" alt="notifi"></a>
+                   <a href="#"><img src="../img/pix.png" alt="picture" class="profile picture"></a>
+               </span>
+           </div>
+
+           <section class="main-sect">
+               <div class="main-sect-heading">
+                   <h5>Riders</h5>
+                   <div class="main-sect-btns uppercase">
+                       <a href="#" class="btn trans-btn">
+                           <img src="../img/svg/download.svg" alt="">
+                           Download
+                       </a>
+                       <a href="create-rider.html" class="btn dark-btn">
+                            <img src="../img/svg/white-plus.svg" alt="">
+                            Add Rider
+                        </a>
+                   </div>
+               </div>
+               <div class="table-area">
+                   <div class="table-area-heading">
+                       <div class="table-area-heading-left">
+                           <p class="table-total">57 Riders</p>
+                           <img src="../img/svg/line.svg" alt="">
+                           <p>20 Dispatched already</p>
+                       </div>
+                       <div class="table-area-heading-right">
+                            <span class="table-search">
+                                <img src="../img/svg/search.svg" alt="search">
+                                <!-- <p>You can search here...</p> -->
+                                <input type="text" class="" placeholder="Search...">
+                            </span>
+                            <span class="table-filter dropdown">
+                                <p class="dropbtn">Dispatched <img src="../img/svg/chevron-down.svg" alt=""></p>
+                                <div class="dropdown-content">
+                                    <a href="#">All clients</a>
+                                    <a href="#">Top clients</a>
+                                    <a href="#">Some clients</a>
+                                </div>
+                            </span>
+                       </div>
+                   </div>
+                   <div class="table-area-body">
+                       <ul class="table-list">
+                           <li class="table-heading">
+                                <p class="name">Riders Name</p>
+                                <p class="email">Email</p>
+                                <p class="number">Phone number</p>
+                                <p class="status">Status</p>
+                                <p class="action">Action</p>
+                           </li>
+                           <li class="table-item">
+                                <p class="name">Boyle Rieder</p>
+                                <p class="email">riederboyle@gmaill.com</p>
+                                <p class="number">07015426857</p>
+                                <p class="status">Dispatched</p>
+                                <p class="action uppercase">
+                                    <a href="each-rider.html" class="btn sec1-btn">View</a>
+                                    <a href="#" class="btn dark-btn">Edit</a>
+                                    <a href="#" class="btn danger-btn">Disable</a>
+                                </p>
+                           </li>
+                           <li class="table-item">
+                                <p class="name">Boyle Rieder</p>
+                                <p class="email">riederboyle@gmaill.com</p>
+                                <p class="number">07015426857</p>
+                                <p class="status">Dispatched</p>
+                                <p class="action uppercase">
+                                    <a href="#" class="btn sec1-btn">View</a>
+                                    <a href="edit-client.html" class="btn dark-btn">Edit</a>
+                                    <a href="#" class="btn danger-btn">Disable</a>
+                                </p>
+                           </li>
+                           <li class="table-item">
+                                <p class="name">Boyle Rieder</p>
+                                <p class="email">riederboyle@gmaill.com</p>
+                                <p class="number">07015426857</p>
+                                <p class="status">Dispatched</p>
+                                <p class="action uppercase">
+                                    <a href="#" class="btn sec1-btn">View</a>
+                                    <a href="edit-client.html" class="btn dark-btn">Edit</a>
+                                    <a href="#" class="btn danger-btn">Disable</a>
+                                </p>
+                           </li>
+                           <li class="table-item">
+                                <p class="name">Boyle Rieder</p>
+                                <p class="email">riederboyle@gmaill.com</p>
+                                <p class="number">07015426857</p>
+                                <p class="status">Dispatched</p>
+                                <p class="action uppercase">
+                                    <a href="#" class="btn sec1-btn">View</a>
+                                    <a href="edit-client.html" class="btn dark-btn">Edit</a>
+                                    <a href="#" class="btn danger-btn">Disable</a>
+                                </p>
+                           </li>
+                       </ul>
+                       <div class="pagination">
+                            <a href="#"><img src="../img/svg/arrow-left.svg" alt=""></a>
+                            <a href="#" class="active">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">...</a>
+                            <a href="#">12</a>
+                            <a href="#"><img src="../img/svg/arrow-right.svg" alt=""></a>
+                       </div>
+                    </div>
+               </div>
+           </section>
+       </main>
+        
+    </div>
+
+
+<!-- Script -->
+<script src="../js/app.js"></script>
+<script>
+    
+</script>
+</body>
+</html>

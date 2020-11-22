@@ -1,0 +1,37 @@
+/*/---- Import ----/*/
+@import '../../scss/control-panel';
+
+
+
+/*/---- Sidenav starts ----/*/
+// Style is in _control-panel.scss
+/*/---- Sidenav ends ----/*/
+
+/*/---- Main start ----/*/
+main {
+    .table-area {
+        &-body {
+            .table-list {
+                li {
+                    p {
+                        &.name {
+                            flex-basis: 25%;
+                        }
+                        &.model {
+                            flex-basis: 20%;
+                        }
+                        &.cost {
+                            flex-basis: 20%;
+                        }
+                        &.status {
+                            flex-basis: 15%;
+                        }
+                        //.action is in _control-panel.scss
+                    }   
+                } 
+            }
+        }
+    }
+}
+/*/---- Main ends ----/*/
+
