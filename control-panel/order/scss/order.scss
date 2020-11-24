@@ -79,7 +79,19 @@ main {
                 }
             }
         }
-        
+    }
+    .order-statistic {
+        @include white-background;
+        &-heading {
+            color: $dark-color1;
+            margin-bottom: 2rem;
+        }
+        .chart {
+            width: 100%;
+            #orderStatisticChart {
+                width: 100%;
+            }
+        }
     }
 
 }

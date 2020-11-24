@@ -239,6 +239,13 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="order-statistic">
+                    <h6 class="order-statistic-heading">Order statictics</h6>
+                    <div class="chart">
+                        <canvas id="orderStatisticChart"></canvas>
+                    </div>
+                </div>
             </div>
         </main>
         
@@ -246,6 +253,79 @@
 
 
 <!-- Script -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script>
+    // Order chart
+    var orderStatisticChart = document.getElementById("orderStatisticChart").getContext("2d");
+    var orderStatistic = new Chart(orderStatisticChart, {
+        type: "bar",
+        data: {
+            labels: [
+                "JAN",
+                "FEB",
+                "MAR",
+                "APR",
+                "MAY",
+                "JUN"
+            ],
+            datasets: [
+                {
+                    label: "Errand service",
+                    backgroundColor: "#E6AF2E",
+                    borderColor: "transparent",
+                    borderWidth: 1,
+                    data: [3, 5, 6, 7, 3, 5]
+                },
+                {
+                    label: "Lifting service",
+                    backgroundColor: "#170F46",
+                    borderColor: "transparent",
+                    borderWidth: 1,
+                    data: [4, 7, 3, 6, 10, 7]
+                },
+                {
+                    label: "Car hiring",
+                    backgroundColor: "#EB5757",
+                    borderColor: "transparent",
+                    borderWidth: 1,
+                    data: [10, 7, 4, 6, 9, 7]
+                },
+                {
+                    label: "Shiping",
+                    backgroundColor: "#06BAEA",
+                    borderColor: "transparent",
+                    borderWidth: 1,
+                    data: [6, 9, 7, 3, 10, 7]
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            legend: {
+                position: "right",
+                labels: {
+                    fontColor: 'rgba(23, 15, 70, 0.65)',
+                    boxWidth: 8,
+                    fontSize: 14
+                }
+            },      
+            title: {
+                display: false
+            },      
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true,
+                        stepSize: 2
+                    }
+                }]
+            }
+        }
+    });
+
+</script>
+
+
 <script src="../js/app.js"></script>
 </body>
 </html>
