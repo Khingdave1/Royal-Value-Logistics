@@ -385,6 +385,14 @@ main {
     // TABLE
     .table-area {
         @include white-background;
+        overflow-x: scroll;
+        /* Hide scrollbar for IE, Edge and Firefox */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        &::-webkit-scrollbar {
+            display: none;
+        }
         &-heading {
             display: flex;
             align-items: center;
