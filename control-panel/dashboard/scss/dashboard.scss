@@ -112,7 +112,8 @@ main {
             }
             .chart {
                 width: 100%;
-                #orderChart {
+                #orderChart,
+                #driverChart {
                     width: 100% !important;
                     height: auto !important;
                 }
