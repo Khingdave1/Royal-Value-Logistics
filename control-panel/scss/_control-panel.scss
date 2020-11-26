@@ -68,6 +68,14 @@ body {
     @media only screen and (max-width: 885px) {
         width: 10%;
         padding: 1rem;
+        overflow-y: scroll;
+        /* Hide scrollbar for IE, Edge and Firefox */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        &::-webkit-scrollbar {
+            display: none;
+        }
         .sidenav-list,
         .sidenav-settings {
             text-align: center;
@@ -77,15 +85,11 @@ body {
         }
     }
     @media only screen and (max-width: 745px) {
-        // display: none;
-        // left: 0;
-        // position: absolute;
         width: 60%;
         top: 0;
         left: -1000%;
         transition: all 0.5s ease-in-out;
         z-index: 999999;
-        overflow-y: scroll;
         .sidenav-list,
         .sidenav-settings {
             text-align: center;
@@ -102,10 +106,6 @@ body {
     &-logo {
         display: inline-block;
         margin-bottom: 20%;
-        // position: absolute;
-        // top: 2rem;
-        // left: 2rem;
-        // z-index: 5;
         @media only screen and (max-width: 885px) {
             margin-bottom: 3rem;
         }
@@ -313,9 +313,11 @@ main {
         display: grid;
         grid-gap: 2rem;
         &-heading {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            @media only screen and (min-width: 480px) {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
             &-left {
                 display: flex;
                 align-items: center;
@@ -338,14 +340,22 @@ main {
                 }
             }         
             .main-sect-btns {
+                @media only screen and (max-width: 480px) {
+                    margin-top: 2rem;
+                }
                 .btn {
                     img {
                         vertical-align: middle;
                         width: 20px;
                         height: 20px;
                     }
+                    &.trans-btn {
+                        margin-right: 0.5rem;
+                    }
                     &.dark-btn {
-                        margin-left: 0.5rem;
+                        @media only screen and (max-width: 480px) {
+                            margin-top: 1rem;
+                        }
                     }
                 }
                 
