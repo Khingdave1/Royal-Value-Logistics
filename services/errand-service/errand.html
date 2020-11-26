@@ -33,7 +33,42 @@
                 <div class="nav-list">
                     <ul class="uppercase">
                         <li class="nav-link"><a href="../../index.html">Home</a></li>
-                        <li class="nav-link active"><a href="#">Services</a></li>
+                        <!-- Services -->
+                        <li class="nav-link service">
+                            <a href="#">Services <img src="../../img/svg/chevron-up.svg" class="chevron-up"></a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="../errand-service/errand.html">
+                                            <h6>Errand service</h6>
+                                            <p>Id amet, aliquet sit elit vestibulum lorem placerat duis semper. Condimentum ut pretium egestas nec eu ac lacus. Aliquam</p>
+                                            <p class="btn light-btn">Use this service</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../lifting-service/lifting-service.html">
+                                            <h6>Lifting service</h6>
+                                            <p>Id amet, aliquet sit elit vestibulum lorem placerat duis semper. Condimentum ut pretium egestas nec eu ac lacus. Aliquam</p>
+                                            <p class="btn light-btn">Use this service</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../car-hire/car-hire.html">
+                                            <h6>Car hire</h6>
+                                            <p>Id amet, aliquet sit elit vestibulum lorem placerat duis semper. Condimentum ut pretium egestas nec eu ac lacus. Aliquam</p>
+                                            <p class="btn light-btn">Use this service</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../shipping/shipping.html">
+                                            <h6>Shipping</h6>
+                                            <p>Id amet, aliquet sit elit vestibulum lorem placerat duis semper. Condimentum ut pretium egestas nec eu ac lacus. Aliquam</p>
+                                            <p class="btn light-btn">Use this service</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
                         <li class="nav-link"><a href="about-us/about-us.html">About us</a></li>
                         <li class="nav-link"><a href="../../contact-us/contact-us.html">Contact us</a></li>
 
@@ -161,15 +196,5 @@
 
 
 <script src="../../js/app.js"></script>
-
-<script>
-    const moreHeading = document.querySelector('.more h5');
-    const morePara = document.querySelector('.more p');
-    const arrowUp = document.querySelector('.chevron-up');
-    moreHeading.addEventListener('click', () => {
-        morePara.classList.toggle('show');
-        arrowUp.classList.toggle('show');
-    });
-</script>
 </body>
 </html>

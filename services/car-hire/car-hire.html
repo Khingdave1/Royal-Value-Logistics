@@ -33,7 +33,42 @@
                 <div class="nav-list">
                     <ul class="uppercase">
                         <li class="nav-link"><a href="../../index.html">Home</a></li>
-                        <li class="nav-link active"><a href="#">Services</a></li>
+                        <!-- Service -->
+                        <li class="nav-link service">
+                            <a href="#">Services <img src="../../img/svg/chevron-up.svg" class="chevron-up"></a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="../errand-service/errand.html">
+                                            <h6>Errand service</h6>
+                                            <p>Id amet, aliquet sit elit vestibulum lorem placerat duis semper. Condimentum ut pretium egestas nec eu ac lacus. Aliquam</p>
+                                            <p class="btn light-btn">Use this service</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../lifting-service/lifting-service.html">
+                                            <h6>Lifting service</h6>
+                                            <p>Id amet, aliquet sit elit vestibulum lorem placerat duis semper. Condimentum ut pretium egestas nec eu ac lacus. Aliquam</p>
+                                            <p class="btn light-btn">Use this service</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../car-hire/car-hire.html">
+                                            <h6>Car hire</h6>
+                                            <p>Id amet, aliquet sit elit vestibulum lorem placerat duis semper. Condimentum ut pretium egestas nec eu ac lacus. Aliquam</p>
+                                            <p class="btn light-btn">Use this service</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../shipping/shipping.html">
+                                            <h6>Shipping</h6>
+                                            <p>Id amet, aliquet sit elit vestibulum lorem placerat duis semper. Condimentum ut pretium egestas nec eu ac lacus. Aliquam</p>
+                                            <p class="btn light-btn">Use this service</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
                         <li class="nav-link"><a href="about-us/about-us.html">About us</a></li>
                         <li class="nav-link"><a href="../../contact-us/contact-us.html">Contact us</a></li>
 
@@ -103,9 +138,38 @@
                             <p class="car-price">$45/hr</p>
                         </div> 
                     </div>
+                    <!-- Extra -->
+                    <div class="car-item">
+                        <img src="../../img/car-hire/car1.png" alt="">
+                        <div class="car-text">
+                            <p class="car-name">Honda Accord</p>
+                            <p class="car-price">$45/hr</p>
+                        </div>                    
+                    </div>
+                    <div class="car-item">
+                        <img src="../../img/car-hire/car2.png" alt="">
+                        <div class="car-text">
+                            <p class="car-name">Audi Series A</p>
+                            <p class="car-price">$45/hr</p>
+                        </div>
+                    </div>
+                    <div class="car-item">
+                        <img src="../../img/car-hire/car3.png" alt="">
+                        <div class="car-text">
+                            <p class="car-name">Lexus L50</p>
+                            <p class="car-price">$45/hr</p>
+                        </div>
+                    </div>
+                    <div class="car-item">
+                        <img src="../../img/car-hire/car4.png" alt="">
+                        <div class="car-text">
+                            <p class="car-name">Mercedes Benz G30c</p>
+                            <p class="car-price">$45/hr</p>
+                        </div> 
+                    </div>
                 </div>
                 <div class="view-more">
-                    <a href="#" class="btn prim-btn uppercase">View more</a>
+                    <button class="btn prim-btn uppercase">View more</button>
                 </div>
             </div>
         </section>
@@ -184,15 +248,6 @@
 
 
 <script src="../../js/app.js"></script>
-
-<script>
-    const moreHeading = document.querySelector('.more h5');
-    const morePara = document.querySelector('.more p');
-    const arrowUp = document.querySelector('.chevron-up');
-    moreHeading.addEventListener('click', () => {
-        morePara.classList.toggle('show');
-        arrowUp.classList.toggle('show');
-    });
-</script>
+<script src="js/car-hire.js"></script>
 </body>
 </html>

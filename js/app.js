@@ -32,3 +32,14 @@ serviceLink.addEventListener('click', () => {
     serviceIcon.classList.toggle('rotate');
 });
 
+
+/*===== MORE ABOUT SERVICE =====*/
+const moreHeading = document.querySelector('.more h5');
+const morePara = document.querySelector('.more p');
+const arrowUp = document.querySelector('.chevron-up');
+
+moreHeading.addEventListener('click', () => {
+    morePara.classList.toggle('show');
+    arrowUp.classList.toggle('show');
+});
+

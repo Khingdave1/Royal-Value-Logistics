@@ -224,7 +224,6 @@ h6 {
             // Mobile Nav view
             @media only screen and (max-width: 745px) {
                 position: fixed;
-                overflow-y: scroll;
                 top: -1000%;
                 right: 0;
                 width: 100%;
@@ -233,7 +232,15 @@ h6 {
                 background-color: $dark-color1;
                 transition: .5s;
                 z-index: 100;
-                text-align: center;    
+                text-align: center;
+                overflow-y: scroll;
+                /* Hide scrollbar for IE, Edge and Firefox */
+                -ms-overflow-style: none;  /* IE and Edge */
+                scrollbar-width: none;  /* Firefox */
+                /* Hide scrollbar for Chrome, Safari and Opera */
+                &::-webkit-scrollbar {
+                    display: none;
+        }    
             } 
             .nav-link {
                 font-size: $button-md-font;
@@ -273,6 +280,85 @@ h6 {
                     }
                     &.active a {
                         color: $primary-color !important;
+                    }
+                }
+
+                // SERVICES
+                &.service {
+                    // Chevron up
+                    a .chevron-up {
+                        display: none;
+                        @media only screen and (max-width: 745px) {
+                            display: inline-block;
+                            transform: rotate(-180deg);
+                        }
+                        &.rotate {
+                            transform: rotate(0deg);
+                        }
+                    }
+                    // Dropdown content
+                    div {
+                        display: none;
+                        // From width 0 - 745px
+                        li {
+                            margin: 1rem 0;
+                            padding: 0.5rem 0;
+                            border-bottom: 1px solid $light-color;
+                            a {
+                                text-transform: none;
+                                p {
+                                    display: none;
+                                } 
+                            }
+                        }
+                        // Big screen starts //
+                        @media only screen and (min-width: 745px) {
+                            position: absolute;
+                            top: 80px;
+                            left: 0;
+                            width: 100%;
+                            background: rgba(255, 255, 255, 0.9);
+                            backdrop-filter: blur(10px);
+                            z-index: 100;
+                            ul {
+                                width: 85%;
+                                margin: 3rem auto;
+                                display: flex;
+                                flex-flow: row wrap;
+                                justify-content: space-around;
+                                align-content: center;
+                                align-items: center;
+                                li {
+                                    width: 200px;
+                                    text-transform: none;
+                                    list-style-image: url('../img/list-style.png');
+                                    a {
+                                        &::after {
+                                            display: none;
+                                        }
+                                        h6 {
+                                            color: $dark-color1;
+                                        }
+                                        p {
+                                            color: $dark-color2;
+                                            font-size: $button-md-font - 2;
+                                            line-height: 20px;
+                                            margin: 20px 0;
+                                            display: block;
+                                        }
+                                        .btn {
+                                            color: $dark-color1;
+                                        }
+                                    }
+                                }
+                            }  
+                        }
+                        // Big screen ends //
+                        &.drop {
+                            display: block;
+                        }
+                        
+                        
                     }
                 }
             }
