@@ -15,4 +15,4 @@ viewMore.addEventListener('click', (e) => {
     if (currentItems >= elementList.length) {
         event.target.style.display = 'none';
     }
-})
+});

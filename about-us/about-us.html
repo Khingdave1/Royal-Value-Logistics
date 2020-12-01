@@ -8,12 +8,12 @@
     <meta name="keywords" content="...">
 
     <!-- Links -->
-    <link rel="stylesheet" href="../css/contact-us.css">
+    <link rel="stylesheet" href="../css/about-us.css">
     <!-- Favicon -->
     <link rel="favicon icon" href="../img/logo.png">
 
     <!-- Title -->
-    <title>Contact Us</title>
+    <title>About Us</title>
 </head>
 <body>
     <div class="container">
@@ -69,8 +69,8 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav-link"><a href="../about-us/about-us.html">About us</a></li>
-                        <li class="nav-link active"><a href="contact-us.html">Contact us</a></li>
+                        <li class="nav-link active"><a href="about-us.html">About us</a></li>
+                        <li class="nav-link"><a href="../contact-us/contact-us.html">Contact us</a></li>
 
                         <!-- Login and signup links for phone view -->
                         <li class="nav-phone-link">
@@ -89,58 +89,14 @@
             </nav>
             <div class="hero">
                 <div class="hero-content">
-                    <h2>Contact Us</h2>
+                    <h2>About Us</h2>
                 </div>
             </div>
         </header>
 
-        <!-- Faqs -->
-        <section class="faqs sect">
-            <div class="sect-heading">
-                <h2>FAQs</h2>
-            </div>
-            <div class="faqs-list">
-                <div class="faqs-item">
-                    <span>
-                        <h6>
-                            <img src="../img/contact/double-dot.png" alt="" class="dot dot-double">
-                            <!-- <img src="../img/contact/dot.png" alt="" class="dot dot-single"> -->
-                            A random question you want to know something about
-                        </h6>
-                        <img src="../img/contact/plus.svg" class="plus">
-                    </span>
-                    <p class="yes">Facilisi lacus, non etiam tempus ut ut purus adipiscing. Ipsum malesuada ipsum at in neque justo, vitae sit. Quis arcu aliquet nulla odio vestibulum malesuada. Id rhoncus congue purus non auctor. Suspendisse praesent turpis molestie tristique quam turpis facilisis. Quis purus egestas condimentum risus commodo, vitae quam. Risus scelerisque lacinia ut vulputate magna rhoncus. Non quis mus pulvinar in a. Quis eleifend odio sit arcu egestas varius eget. Ultrices velit semper nibh dignissim in arcu leo. Vel augue tellus tellus eu, augue tristique arcu. Iaculis diam, augue consectetur nec morbi cras. Nullam nec praesent nulla elit, feugiat aliquet tempor est. Donec fermentum non magna ultricies egestas habitasse. Ullamcorper quam sit tempus risus, pharetra, congue et, risus. Ultrices lacus, est arcu, interdum sapien semper.</dd>
-                </div>
-                <div class="faqs-item">
-                    <span>
-                        <h6><img src="../img/contact/double-dot.png" alt="" class="dot">A random question you want to know something about</h6>
-                        <img src="../img/contact/plus.svg" class="plus">
-                    </span>
-                    <p class="yes">Facilisi lacus, non etiam tempus ut ut purus adipiscing. Ipsum malesuada ipsum at in neque justo, vitae sit. Quis arcu aliquet nulla odio vestibulum malesuada. Id rhoncus congue purus non auctor. Suspendisse praesent turpis molestie tristique quam turpis facilisis. Quis purus egestas condimentum risus commodo, vitae quam. Risus scelerisque lacinia ut vulputate magna rhoncus. Non quis mus pulvinar in a. Quis eleifend odio sit arcu egestas varius eget. Ultrices velit semper nibh dignissim in arcu leo. Vel augue tellus tellus eu, augue tristique arcu. Iaculis diam, augue consectetur nec morbi cras. Nullam nec praesent nulla elit, feugiat aliquet tempor est. Donec fermentum non magna ultricies egestas habitasse. Ullamcorper quam sit tempus risus, pharetra, congue et, risus. Ultrices lacus, est arcu, interdum sapien semper.</dd>
-                </div>
-            </div>
+        <section class="sect">
+            <p>RIDE EXPRESS is a logistic firm charged with the  responsibility of delivering professional services in the  pickup and delivery of goods in ilorin metropolis  and plans to extend her bounds to other parts of the federation.</p>
         </section>
-
-        <!-- contact -->
-        <section class="contact">
-            <div class="contact-heading">
-                <h3>You still have a question?</h3>
-                <p>If you cannot find your answer in our FAQ you can always contact us. We are opened and readily available to answer your query</p>
-            </div>
-            <div class="contact-options">
-                <a href="tel: 09036577028" class="contact-item">
-                    <img src="../img/contact/phone.svg" alt="">
-                    <h6>+234 (0) 803 736 2731</h6>
-                    <p>We are always  available to help</p>
-                </a>
-                <a href="#" class="contact-item">
-                    <img src="../img/contact/at.svg" alt="">
-                    <h6>contact@royaldelivery.com</h6>
-                    <p>This is the best way to contact us</p>
-                </a>
-            </div>
-        </section>
-
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-content">
@@ -158,7 +114,7 @@
                     <ul class="footer-links uppercase">
                         <li><a href="../index.html">Home</a></li>
                         <li><a href="../services/lifting-service/lifting-service.html">Services</a></li>
-                        <li><a href="contact-us.html">Contact us</a></li>
+                        <li><a href="../contact-us/contact-us.html">Contact us</a></li>
                     </ul>
 
                     <!-- Social links -->
@@ -183,16 +139,5 @@
 
 
 <script src="../js/app.js"></script>
-<script>
-    const faqsHeadings = document.querySelectorAll('.faqs-item span');
-    const faqsParas = document.querySelectorAll('.faqs span + p');
-    function showFaqs() {
-        // this.classList.toggle('show');
-        // faqsPara.classList.toggle('show');
-        faqsParas.forEach(n => n.classList.toggle('show'));
-        // this.classList.toggle('show');
-    }
-    faqsHeadings.forEach(n => n.addEventListener('click', showFaqs));
-</script>
 </body>
 </html>

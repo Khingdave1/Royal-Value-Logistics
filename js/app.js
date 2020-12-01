@@ -26,6 +26,7 @@ document.getElementById('copyright').appendChild(document.createTextNode(new Dat
 const serviceLink = document.querySelector('.service a');
 const serviceList = document.querySelector('.service div');
 const serviceIcon = document.querySelector('.service .chevron-up');
+const nav = document.querySelector('nav');
 
 serviceLink.addEventListener('click', () => {
     serviceList.classList.toggle('drop');
