@@ -13,6 +13,6 @@ viewMore.addEventListener('click', (e) => {
 
     // Load more button will be hidden after list fully loaded
     if (currentItems >= elementList.length) {
-        event.target.style.display = 'none';
+        e.target.style.display = 'none';
     }
 });

@@ -182,17 +182,25 @@
 
 
 
-<script src="../js/app.js"></script>
+<!-- <script src="../js/app.js"></script> -->
 <script>
     const faqsHeadings = document.querySelectorAll('.faqs-item span');
     const faqsParas = document.querySelectorAll('.faqs span + p');
-    function showFaqs() {
-        // this.classList.toggle('show');
-        // faqsPara.classList.toggle('show');
-        faqsParas.forEach(n => n.classList.toggle('show'));
-        // this.classList.toggle('show');
-    }
-    faqsHeadings.forEach(n => n.addEventListener('click', showFaqs));
+    // function showFaqs(n) {
+    //     // this.classList.toggle('show');
+    //     faqsPara.classList.toggle('show');
+    //     // faqsParas.forEach(n => n.classList.toggle('show'));
+    //     // console.log(faqsPara[1]);
+    //     console.log(n);
+    // }
+    faqsHeadings.forEach(n => n.addEventListener('click', function ($event) {
+                const styles = $event.currentTarget.parentElement.children.classList;
+                console.log(styles);
+                // console.log(styles);
+                
+            })
+        );
+
 </script>
 </body>
 </html>

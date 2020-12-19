@@ -75,19 +75,27 @@
 .download {
     position: relative;
     width: 100%;
-    height: 542px; // still use this
-    // height: 100vh;
+    // height: 542px; // still use this
+    // height: 100vh; 
+    // padding: 7.5%;
+    @media only screen and (min-width: 745px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     &-bg {
         position: absolute;
         top: 0;
         width: 100%;
         height: 100%;
+        z-index: -10;
     }
     &-content {
-        position: absolute;
-        top: 50%;
-        left: 7.5%; // (100% - 85%) / 2
-        transform: translateY(-50%);
+        // position: absolute;
+        // top: 50%;
+        // // left: 7.5%; // (100% - 85%) / 2
+        // transform: translateY(-50%);
+        padding: 3rem 7.5%;
         h2 {
             margin-bottom: 30px;
         }
@@ -103,15 +111,17 @@
         }
     }
     &-phone {
-        position: absolute;
-        bottom: 0;
-        right: 7.5%;
-        @media only screen and (max-width: 1015px) {
-            display: none;
+        // position: absolute;
+        // bottom: 0;
+        // right: 0;
+        &-content {
+            width: 70%;
+            height: 90%;
+            margin: 0 auto;
         }
         img {
-            width: 420px;
-            height: 577px;
+            width: 100%;
+            height: 100%;
         }
     }
 }
