@@ -118,6 +118,20 @@
                     </span>
                     <p class="yes">Facilisi lacus, non etiam tempus ut ut purus adipiscing. Ipsum malesuada ipsum at in neque justo, vitae sit. Quis arcu aliquet nulla odio vestibulum malesuada. Id rhoncus congue purus non auctor. Suspendisse praesent turpis molestie tristique quam turpis facilisis. Quis purus egestas condimentum risus commodo, vitae quam. Risus scelerisque lacinia ut vulputate magna rhoncus. Non quis mus pulvinar in a. Quis eleifend odio sit arcu egestas varius eget. Ultrices velit semper nibh dignissim in arcu leo. Vel augue tellus tellus eu, augue tristique arcu. Iaculis diam, augue consectetur nec morbi cras. Nullam nec praesent nulla elit, feugiat aliquet tempor est. Donec fermentum non magna ultricies egestas habitasse. Ullamcorper quam sit tempus risus, pharetra, congue et, risus. Ultrices lacus, est arcu, interdum sapien semper.</dd>
                 </div>
+                <div class="faqs-item">
+                    <span>
+                        <h6><img src="../img/contact/double-dot.png" alt="" class="dot">A random question you want to know something about</h6>
+                        <img src="../img/contact/plus.svg" class="plus">
+                    </span>
+                    <p class="yes">Facilisi lacus, non etiam tempus ut ut purus adipiscing. Ipsum malesuada ipsum at in neque justo, vitae sit. Quis arcu aliquet nulla odio vestibulum malesuada. Id rhoncus congue purus non auctor. Suspendisse praesent turpis molestie tristique quam turpis facilisis. Quis purus egestas condimentum risus commodo, vitae quam. Risus scelerisque lacinia ut vulputate magna rhoncus. Non quis mus pulvinar in a. Quis eleifend odio sit arcu egestas varius eget. Ultrices velit semper nibh dignissim in arcu leo. Vel augue tellus tellus eu, augue tristique arcu. Iaculis diam, augue consectetur nec morbi cras. Nullam nec praesent nulla elit, feugiat aliquet tempor est. Donec fermentum non magna ultricies egestas habitasse. Ullamcorper quam sit tempus risus, pharetra, congue et, risus. Ultrices lacus, est arcu, interdum sapien semper.</dd>
+                </div>
+                <div class="faqs-item">
+                    <span>
+                        <h6><img src="../img/contact/double-dot.png" alt="" class="dot">A random question you want to know something about</h6>
+                        <img src="../img/contact/plus.svg" class="plus">
+                    </span>
+                    <p class="yes">Facilisi lacus, non etiam tempus ut ut purus adipiscing. Ipsum malesuada ipsum at in neque justo, vitae sit. Quis arcu aliquet nulla odio vestibulum malesuada. Id rhoncus congue purus non auctor. Suspendisse praesent turpis molestie tristique quam turpis facilisis. Quis purus egestas condimentum risus commodo, vitae quam. Risus scelerisque lacinia ut vulputate magna rhoncus. Non quis mus pulvinar in a. Quis eleifend odio sit arcu egestas varius eget. Ultrices velit semper nibh dignissim in arcu leo. Vel augue tellus tellus eu, augue tristique arcu. Iaculis diam, augue consectetur nec morbi cras. Nullam nec praesent nulla elit, feugiat aliquet tempor est. Donec fermentum non magna ultricies egestas habitasse. Ullamcorper quam sit tempus risus, pharetra, congue et, risus. Ultrices lacus, est arcu, interdum sapien semper.</dd>
+                </div>
             </div>
         </section>
 
@@ -186,18 +200,10 @@
 <script>
     const faqsHeadings = document.querySelectorAll('.faqs-item span');
     const faqsParas = document.querySelectorAll('.faqs span + p');
-    // function showFaqs(n) {
-    //     // this.classList.toggle('show');
-    //     faqsPara.classList.toggle('show');
-    //     // faqsParas.forEach(n => n.classList.toggle('show'));
-    //     // console.log(faqsPara[1]);
-    //     console.log(n);
-    // }
     faqsHeadings.forEach(n => n.addEventListener('click', function ($event) {
-                const styles = $event.currentTarget.parentElement.children.classList;
+                const styles = $event.currentTarget.parentElement.children[1];
                 console.log(styles);
-                // console.log(styles);
-                
+                styles.classList.toggle('show');
             })
         );
 
