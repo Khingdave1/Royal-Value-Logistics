@@ -9,3 +9,57 @@
 }
 /*/---- Header ends ----/*/
 
+/*/---- Header ends ----/*/
+.about-sect {
+    .about-details {
+        margin-bottom: 3rem;
+        &-heading {
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 100px;
+                height: 100px;
+                background: $accent-color;
+                border-radius: 50%;
+                display: inline-block;
+                z-index: -1;
+            }
+        }
+        &-body {
+            p {
+                margin-bottom: 1rem;
+                line-height: 24px;
+                text-align: justify;
+            }
+        }
+    }
+    .about-images {
+        &-list {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-content: center;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 2rem;
+            .about-images-item {
+                margin: 2rem 0.5rem;
+                width: 250px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+/*/---- Header ends ----/*/
+
+

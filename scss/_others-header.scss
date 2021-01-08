@@ -63,7 +63,7 @@
     p {
         display: none;
         color: $dark-color2;
-        transition: all 0.5s ease-in;
+        transition: display 4s ease-in;
         &.show {
             display: block;
         }

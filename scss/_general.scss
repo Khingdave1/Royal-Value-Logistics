@@ -60,6 +60,7 @@ body {
 /*/---- Heading begins ----/*/
 h1 {
     font-size: $h1-font;
+    font-weight: 300;
     @media only screen and (max-width: 745px) {
         font-size: $h1-font - 15;
     }
