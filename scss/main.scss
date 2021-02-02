@@ -95,6 +95,7 @@
         padding: 3rem 7.5%;
         h2 {
             margin-bottom: 30px;
+            color: $white-color !important;
         }
         .download-buttons a {
             display: inline-block;
@@ -226,6 +227,7 @@
     &-content {
         h3 {
             margin-bottom: 30px;
+            color: $white-color;
         }
     }
 }

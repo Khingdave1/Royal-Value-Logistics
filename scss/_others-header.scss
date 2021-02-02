@@ -45,12 +45,8 @@
     }
     h5 {
         font-weight: 500;
-        color: $dark-color1;
         cursor: pointer;
         transition: all 0.5s ease-in;
-        // &:hover + p {
-        //     display: block;
-        // }
         img {
             float: right;
             vertical-align: middle;
@@ -62,8 +58,6 @@
     }
     p {
         display: none;
-        color: $dark-color2;
-        transition: display 4s ease-in;
         &.show {
             display: block;
         }
