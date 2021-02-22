@@ -31,6 +31,13 @@ const nav = document.querySelector('nav');
 serviceLink.addEventListener('click', () => {
     serviceList.classList.toggle('drop');
     serviceIcon.classList.toggle('rotate');
+
+    // Hide the dropdown if you click outside the div
+    window.addEventListener('click', function(e){
+        if (!serviceList.contains(e.target) && !serviceLink.contains(e.target)) {
+        serviceList.classList.remove('drop');
+      } 
+    });
 });
 
 
@@ -43,4 +50,18 @@ moreHeading.addEventListener('click', () => {
     morePara.classList.toggle('show');
     arrowUp.classList.toggle('show');
 });
+
+
+/*===== ADD CHATBOT =====*/
+// const container = document.querySelector('.container');
+
+// function showChatBot() {
+//     let output = "";
+//     output =`   <a href="#!" class="chat-bot" title="WhatsApp">
+//                     <img src="/logistics/img/svg/bxl-whatsapp.svg">
+//                 </a> `
+
+//     container.innerHTML = output;
+// }
+// document.addEventListener('DOMContentLoaded', showChatBot);
 
